@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: #1e1e1e;
+    color: #ffffff;
     text-align: center;
     background-color: rgba(255, 0, 0, 0.684);
     height: 100vh;
@@ -43,6 +43,7 @@ h1 {
     width: 500px;
     height: 400px;
     background: #81818149;
+    border-radius: 30px;
     padding: 50px 20px;
     margin-bottom: 30px;
 }
@@ -54,12 +55,16 @@ h1 {
     height: 300px; 
     width: 100%;
     max-width: 500px; 
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-bottom: 20px;
     border-radius: 40px;
 }
 
+/* Got from google search/Credited in ReadMe */
 .sports-image {
     background: url(../images/rooneybc-quiz.jpg) no-repeat center center/cover;
-    text-align: center;
+
+}
+
+.games-image {
+    background: url(../images/gow-ragnarok-quiz.jpeg) no-repeat center center/cover;
 }
