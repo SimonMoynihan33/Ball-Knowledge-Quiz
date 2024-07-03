@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Red Devils Quiz</title>
+    <title>Video Game/Football Quiz</title>
 </head>
+
 <body>
-<h1>Quiz title</h1>
+    <a href="index.html">
+        <h1>Quiz title</h1>
+    </a>
+    <div class="container">
+        <div id="initial-content" class="sports">
+            <h3 class="sports-quiz">Play The Sports Quiz!</h3>
+            <div class="sports-image"></div>
+            <div class="sports-button">
+                <button class="sports-easy">Let's Play!</button>
+            </div>
+        </div>
+        <div class="video-games">
+            <h3 class="games-quiz">Play Our Video Games Quiz!</h3>
+            <div class="games-image"></div>
+            <div class="games-button">
+                <button class="games-easy">Let's Play!</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section id="quiz-container" class="hidden">
+
+        <div class="stop-quiz-cont">
+            <div class="score-area">
+                <p class="scores">Correct Answers <span id="score">0</span></p>
+                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+            </div>
+        </div>
+        <div id="question"></div>
+        <div id="answer-buttons"></div>
+        <a href="index.html" id="stop-quiz" class="hidden">Stop Quiz</a>
+    </section>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
