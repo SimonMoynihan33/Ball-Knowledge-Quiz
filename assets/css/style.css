@@ -12,10 +12,10 @@ body {
     /* Gradient color for background. */
     background: linear-gradient(
         to right,
-        rgba(255, 85, 0, 0.856) 0%,
-        rgba(255, 85, 0, 0.856) 30%,
-        rgba(40, 24, 219, 0.905) 70%,
-        rgba(40, 24, 219, 0.905) 100%
+        #101820, 0%,
+        #101820, 50%,
+        #FEE715 10%,
+        #FEE715 100%
       );    
 }
 
@@ -26,7 +26,7 @@ body {
 
 h1, a {
     text-decoration: none;
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 h1 {
@@ -64,22 +64,33 @@ h1 {
 /* Style Buttons */
 .btn {
     font-size: 1.3rem;
-    height: 40px;
+    height: 50px;
+    width: 12rem;
     margin: 5px;
     text-align: center;
     margin-bottom: 30px;
     text-decoration: none;
     border-radius: 20px;
+    font-weight: bolder;
+    border: 2px solid #1e1e1e;
 }
 
 .games-easy {
     color: #1e1e1e;
-    background: rgba(255, 85, 0, 0.856);
+    background: #101820,;
 }
 
 .sports-easy {
     color: #1e1e1e;
-    background: rgba(40, 24, 219, 0.905);
+    background: #FEE715;
+}
+
+/* activates when button is hovered with cursor */
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transition: transform 150ms;
+    transform: scale(1.02);
 }
 
 /* Got from google search/Credited in ReadMe */
