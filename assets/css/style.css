@@ -2,6 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #1e1e1e;
     text-align: center;
+    background-color: rgba(255, 0, 0, 0.684);
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(
+        to right,
+        rgba(255, 85, 0, 0.856) 0%,
+        rgba(255, 85, 0, 0.856) 30%,
+        rgba(40, 24, 219, 0.905) 70%,
+        rgba(40, 24, 219, 0.905) 100%
+      );    
 }
 
 
