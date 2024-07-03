@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
 
-body {
+#home {
     font-family: 'Nova Round', system-ui;
     color: #ffffff;
     text-align: center;
-    background-color: rgba(255, 0, 0, 0.684);
     height: 100vh;
     width: 100%;
     padding: 0;
@@ -101,4 +100,35 @@ h1 {
 
 .games-image {
     background: url(../images/gow-ragnarok-quiz\ \(1\).webp) no-repeat center center/cover;
+}
+
+/* Soccer html page */
+.rules {
+    list-style-type: none;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+#soccer {
+    font-family: 'Nova Round', system-ui;
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #101820;
+}
+
+.rules-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 60vw;
+    height: 80vh;
+    background: #81818149;
+    border-radius: 30px;
+    padding: 50px 20px;
+    margin-bottom: 30px;
 }
