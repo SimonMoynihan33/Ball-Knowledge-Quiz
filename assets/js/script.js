@@ -69,6 +69,7 @@ function startGame() {
     getNewQuestion();
 }
 
+/*
 function getNewQuestion () {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         // Saves to local storage
@@ -93,6 +94,61 @@ function getNewQuestion () {
 
     availableQuestions.splice(questionsIndex, 1);
 
+    acceptingAnswers = true;
+}
+*/
+
+// Main function 
+function getNewQuestion() {
+    if (isQuizOver()) {
+        endQuiz();
+        return;
+    }
+
+    incrementQuestionCounter();
+    updateProgress();
+    updateQuestion();
+    enableAnswering();
+}
+
+// Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
+function isQuizOver() {
+    return availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS;
+}
+
+// Handles logic for ending quiz, saving score, redirecting to end page
+function endQuiz() {
+    localStorage.setItem('mostRecentScore', score);
+    window.location.assign('/end.html');
+}
+
+// Increment question counter 
+function incrementQuestionCounter() {
+    questionCounter++;
+}
+
+// Updates progress text and progress bar
+function updateProgress() {
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+    progressBarFull.computedStyleMap.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
+}
+
+// Selects a new question, updates choices displayed and removes old question
+function updateQuestion() {
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
+    question.innerText = currentQuestion.question;
+
+    choices.forEach(choice => {
+        const choiceNumber = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuestions.splice(questionsIndex, 1);
+}
+
+// Allows user to submit an answer
+function enableAnsweringAnswering() {
     acceptingAnswers = true;
 }
 
