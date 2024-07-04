@@ -46,6 +46,37 @@ Changed by Emmet autofill when typing
 
 Answer container changes to different size each time question is answered and updated
 
+- Bug 5 
+
+Timer not counting down
+- Fix 
+
+Did not add timer variable to global scope
+```
+const timerText = document.querySelector('#timer-text');
+```
+
+#### Bug 6
+
+Timer does not reset after moving to next question
+- fix
+
+Add resetTimer(); function to getNewQuestion(); function
+
+#### Bug 7 
+
+Timer increments by two instead of one second
+- Fix 
+```
+function handleTimeExpired() {
+    acceptingAnswers = false;
+    getNewQuestion(); // Move to next question
+    updateTimer();
+}
+```
+updateTimer(); function needed to be changed to resetTimer();
+
+
 ## Credits
 - Photos 
 - Youtube tutorial https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=PLmEz6BxNwVPc-oP7rMw_oJ7yssN0jT844&index=2 By 'Brian Design'

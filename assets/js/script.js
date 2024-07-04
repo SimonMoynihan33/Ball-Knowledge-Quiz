@@ -9,6 +9,7 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const timerText = document.querySelector('#timer-text');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -16,8 +17,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
+let questions = [{
         question: 'Who is the all-time top scorer in the UEFA Champions League?',
         choice1: 'Lionel Messi',
         choice2: 'Robert Lewandowski',
@@ -68,36 +68,8 @@ function startGame() {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
+    resetTimer();
 }
-
-/*
-function getNewQuestion () {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        // Saves to local storage
-        localStorage.setItem('mostRecentScore', score);
-
-        return window.location.assign('/end.html');
-    }
-
-    questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    // Below code divides question counter by max questions and multiplies to get the progress bar to fill
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
-
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionsIndex];
-    question.innerText = currentQuestion.question;
-
-    choices.forEach(choice => {
-    const number = choice.dataset['number'];
-    choice.innerText = currentQuestion['choice' + number];
-    })
-
-    availableQuestions.splice(questionsIndex, 1);
-
-    acceptingAnswers = true;
-}
-*/
 
 // Main function 
 function getNewQuestion() {
@@ -110,6 +82,7 @@ function getNewQuestion() {
     updateProgress();
     updateQuestion();
     enableAnswering();
+    /* resetTimer(); */
 }
 
 // Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
@@ -155,16 +128,16 @@ function enableAnswering() {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
+        if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
-        'incorrect';
+            'incorrect';
 
-        if(classToApply === 'correct') {
+        if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
 
@@ -182,6 +155,41 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
+}
+
+// Create Timer for each question
+// Perplexity asked to explain how to create timer
+const TIME_LIMIT = 10;
+
+let timeLeft = TIME_LIMIT;
+
+function updateTimer() {
+    timerText.innerText = `Time left: ${timeLeft}s`
+}
+
+function resetTimer() {
+    timeLeft = TIME_LIMIT;
+    console.log('Timer reset to:', timeLeft);
+    updateTimer(); // Call updateTimer function to display initial time
+    decrementTimer();
+}
+
+function decrementTimer() {
+    setTimeout(() => {
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateTimer();
+            decrementTimer(); // Repeat call to continue the countdown
+        } else {
+            handleTimeExpired();
+        }
+    }, 1000); // Decrement timer every 1 second
+}
+
+function handleTimeExpired() {
+    acceptingAnswers = false;
+    getNewQuestion(); // Move to next question
+    resetTimer();
 }
 
 startGame();
