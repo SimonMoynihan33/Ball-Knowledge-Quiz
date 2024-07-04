@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
-* { 
+
+* {
     font-family: 'Nova Round', system-ui;
 }
 
@@ -11,13 +12,11 @@
     padding: 0;
     margin: 0;
     /* Gradient color for background. */
-    background: linear-gradient(
-        to right,
-        #101820, 0%,
-        #101820, 50%,
-        #FEE715 10%,
-        #FEE715 100%
-      );    
+    background: linear-gradient(to right,
+            #101820, 0%,
+            #101820, 50%,
+            #FEE715 10%,
+            #FEE715 100%);
 }
 
 /* Hides all items with this class */
@@ -25,14 +24,15 @@
     display: none;
 }
 
-h1, a {
+h1,
+a {
     text-decoration: none;
     color: #ffffff;
 }
 
 h1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 2em;
 }
 
 .container {
@@ -43,7 +43,8 @@ h1 {
 }
 
 /* Card for each quiz to be shown on */
-.video-games, .sports {
+.video-games,
+.sports {
     width: 500px;
     height: 400px;
     background: #81818149;
@@ -52,13 +53,14 @@ h1 {
     margin-bottom: 30px;
 }
 
-.sports-image, .games-image {
+.sports-image,
+.games-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px; 
+    height: 300px;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     margin-bottom: 20px;
     border-radius: 40px;
 }
@@ -79,7 +81,7 @@ h1 {
 
 .games-easy {
     color: #1e1e1e;
-    background: #101820,;
+    background: #101820, ;
 }
 
 .sports-easy {
@@ -127,7 +129,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
     width: 60vw;
     height: 80vh;
     background: #81818149;
@@ -138,15 +140,16 @@ h1 {
 
 /* Soccer quiz page */
 .soccer-quiz {
-    background: #101820;
-    color:#101820;
-    font-size: 2rem;
+    background: url(../images/pitch-bg.webp) no-repeat center center/cover;
+    color: #101820;
+    font-size: 1.5rem;
 }
 
 .choice-container {
     display: flex;
     margin-bottom: 1rem;
     width: 100%;
+
     border-radius: 8px;
     background: #FEE715;
     min-width: 50rem;
@@ -163,5 +166,47 @@ h1 {
 }
 
 .hidden {
-    display: none; /* Hides anything with this class */
+    display: none;
+    /* Hides anything with this class */
+}
+
+/* Adds style when hovering over answers */
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 .4rem 1rem 0 #FEE715;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: .7rem 2.5rem;
+    color: #101820;
+}
+
+.choice-text {
+    padding: .7rem;
+    width: 100%;
+}
+
+/* Progress Bar */
+#progressBar {
+    width: 90%;
+    height: 40px;
+    border: 0.2rem solid #FEE715;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: #FEE715;
+    width: 0%;
+}
+
+/* Color when you get the question correct */
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 100px;
+    }
 }
