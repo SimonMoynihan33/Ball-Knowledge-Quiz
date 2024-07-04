@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+* { 
+    font-family: 'Nova Round', system-ui;
+}
 
 #home {
-    font-family: 'Nova Round', system-ui;
     color: #ffffff;
     text-align: center;
     height: 100vh;
@@ -40,6 +42,7 @@ h1 {
     flex-wrap: wrap;
 }
 
+/* Card for each quiz to be shown on */
 .video-games, .sports {
     width: 500px;
     height: 400px;
@@ -84,7 +87,7 @@ h1 {
     background: #FEE715;
 }
 
-/* activates when button is hovered with cursor */
+/* Activates when button is hovered with cursor */
 .btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0;
@@ -131,4 +134,34 @@ h1 {
     border-radius: 30px;
     padding: 50px 20px;
     margin-bottom: 30px;
+}
+
+/* Soccer quiz page */
+.soccer-quiz {
+    background: #101820;
+    color:#101820;
+    font-size: 2rem;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    background: #FEE715;
+    min-width: 50rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none; /* Hides anything with this class */
 }
