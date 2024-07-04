@@ -177,7 +177,7 @@ function resetTimer() {
     timeLeft = TIME_LIMIT;
     console.log('Timer reset to:', timeLeft);
     updateTimer(); // Call updateTimer function to display initial time
-    setTimeout(decrementTimer, 1000); // Call decrement timer function to start the countdown
+    decrementTimer();
 }
 
 function decrementTimer() {
@@ -189,7 +189,7 @@ function decrementTimer() {
             handleTimeExpired();
         }
 
-        // Wrapped in seperate setTimeout so the timer does not decrement by two
+        // Wrapped in seperate setTimeout so the timer does not decrement by two seconds
         setTimeout(() => {
             decrementTimer(); // Repeat call to continue the countdown
           }, 1000);

@@ -1,3 +1,77 @@
+# Quiz
+
+
+
+## Why 
+
+
+## Table of Contents
+
+- [Creation Structure](#creation-structure)
+- [User Experience](#user-experience)
+- [Goals](#goals)
+- [Features](#features)
+- [Design](#design)
+- [Future Deployment](#future-deployment)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+## Creation Structure
+
+
+
+### Wireframes
+
+## User Experience
+
+### First Time Users
+
+#### Goals for first time users
+
+
+### Repeat Users
+
+
+## Goals
+
+## Features
+
+
+## Design
+
+
+
+
+
+
+## Future Deployment
+
+## Testing 
+
+### Manual Testing
+
+
+### Lighthouse scores
+- **Desktop**
+
+
+- **Mobile**
+
+
+### Validator Testing 
+
+- HTML
+  
+- CSS
+  
+
+- WAVE
+  - Each page was put through [WAVE](https://wave.webaim.org/) evaluation tool and any errors found were fixed.
+
+## Bugs
+
 ## Bugs
 - Bug 1 
 
@@ -66,16 +140,7 @@ Add resetTimer(); function to getNewQuestion(); function
 #### Bug 7 
 
 Timer increments by two instead of one second
-- Fix 
-```
-function handleTimeExpired() {
-    acceptingAnswers = false;
-    getNewQuestion(); // Move to next question
-    updateTimer();
-}
-```
-updateTimer(); function needed to be changed to resetTimer();
-
+- Fix ...
 
 ## Credits
 - Photos 
