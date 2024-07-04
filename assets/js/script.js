@@ -68,7 +68,6 @@ function startGame() {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
-    resetTimer();
 }
 
 // Main function 
@@ -82,7 +81,7 @@ function getNewQuestion() {
     updateProgress();
     updateQuestion();
     enableAnswering();
-    /* resetTimer(); */
+    resetTimer(); 
 }
 
 // Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
@@ -126,31 +125,38 @@ function enableAnswering() {
     acceptingAnswers = true;
 }
 
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return;
+function setupEventListener(choices) {
+    choices.forEach(choice => {
+        choice.addEventListener('click', handleChoiceClick);
+    });
+}
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+// Handle click event for a choice
+function handleChoiceClick(e) {
+    if(!acceptingAnswers) return;
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
-            'incorrect';
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset['number'];
 
-        if (classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
-        }
+    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+    if (classToApply === 'correct') {
+        incrementScore(SCORE_POINTS);
+    }
 
-        selectedChoice.parentElement.classList.add(classToApply);
+    applyClassAndContinue(selectedChoice, classToApply);
+}
 
-        // Allows time to see if answer is correct or not
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
+// Determine class to apply based on selected answer
+function applyClassAndContinue(selectedChoice, classToApply) {
+    selectedChoice.parentElement.classList.add(classToApply);
 
-        }, 1000)
-    })
-})
+    // Allows time to see if answer is correct 
+    setTimeout(() => {
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQuestion();
+    }, 1000);
+}
 
 incrementScore = num => {
     score += num;
@@ -171,7 +177,7 @@ function resetTimer() {
     timeLeft = TIME_LIMIT;
     console.log('Timer reset to:', timeLeft);
     updateTimer(); // Call updateTimer function to display initial time
-    decrementTimer();
+    setTimeout(decrementTimer, 1000); // Call decrement timer function to start the countdown
 }
 
 function decrementTimer() {
@@ -179,17 +185,21 @@ function decrementTimer() {
         if (timeLeft > 0) {
             timeLeft--;
             updateTimer();
-            decrementTimer(); // Repeat call to continue the countdown
         } else {
             handleTimeExpired();
         }
+
+        // Wrapped in seperate setTimeout so the timer does not decrement by two
+        setTimeout(() => {
+            decrementTimer(); // Repeat call to continue the countdown
+          }, 1000);
     }, 1000); // Decrement timer every 1 second
 }
 
 function handleTimeExpired() {
     acceptingAnswers = false;
     getNewQuestion(); // Move to next question
-    resetTimer();
 }
 
+setupEventListener(choices);
 startGame();
