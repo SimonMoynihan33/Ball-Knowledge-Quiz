@@ -65,6 +65,7 @@ const MAX_QUESTIONS = 5;
 // Function to start the game
 function startGame() {
     questionCounter = 0;
+    score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
 }
@@ -130,7 +131,7 @@ function incrementQuestionCounter() {
 // Updates progress text and progress bar
 function updateProgress() {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.computedStyleMap.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 }
 
 // Selects a new question, updates choices displayed and removes old question
@@ -140,7 +141,7 @@ function updateQuestion() {
     question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-        const choiceNumber = choice.dataset['number'];
+        const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
 
@@ -148,7 +149,7 @@ function updateQuestion() {
 }
 
 // Allows user to submit an answer
-function enableAnsweringAnswering() {
+function enableAnswering() {
     acceptingAnswers = true;
 }
 
@@ -163,10 +164,24 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
         'incorrect';
 
+        if(classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
         // Allows time to see if answer is correct or not
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        })
+
+        }, 1000)
     })
 })
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
+
+startGame();
