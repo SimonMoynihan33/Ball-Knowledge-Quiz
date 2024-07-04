@@ -203,6 +203,14 @@ h1 {
     width: 0%;
 }
 
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
+}
+
 /* Color when you get the question correct */
 
 @media screen and (max-width: 768px) {
