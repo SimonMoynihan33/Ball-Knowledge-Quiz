@@ -149,7 +149,7 @@ h1 {
 .choice-container {
     display: flex;
     margin-bottom: 1rem;
-    width: 80vw;
+    width: 100%;
     border-radius: 8px;
     background: #FEE715;
     min-width: 50%;
