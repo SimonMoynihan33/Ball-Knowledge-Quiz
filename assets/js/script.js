@@ -170,29 +170,27 @@ const TIME_LIMIT = 10;
 let timeLeft = TIME_LIMIT;
 
 function updateTimer() {
+    console.log("update Timer");
     timerText.innerText = `Time left: ${timeLeft}s`
+    decrementTimer();
 }
 
 function resetTimer() {
     timeLeft = TIME_LIMIT;
     console.log('Timer reset to:', timeLeft);
     updateTimer(); // Call updateTimer function to display initial time
-    decrementTimer();
 }
 
 function decrementTimer() {
-    setTimeout(() => {
+    this.setTimeout(() => {
         if (timeLeft > 0) {
             timeLeft--;
+            console.log("Time Left", timeLeft);
             updateTimer();
         } else {
             handleTimeExpired();
         }
 
-        // Wrapped in seperate setTimeout so the timer does not decrement by two seconds
-        setTimeout(() => {
-            decrementTimer(); // Repeat call to continue the countdown
-          }, 1000);
     }, 1000); // Decrement timer every 1 second
 }
 
