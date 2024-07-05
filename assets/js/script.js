@@ -199,5 +199,6 @@ function handleTimeExpired() {
     getNewQuestion(); // Move to next question
 }
 
+
 setupEventListener(choices);
 startGame();
