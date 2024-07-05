@@ -73,7 +73,7 @@
 ## Bugs
 #### Bug 1 
 
-**Cannot get options the options in the containers to show along with question.**
+**Cannot get the options in the containers to show along with question.**
 
 - Troubleshooting:
 
