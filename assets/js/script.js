@@ -16,6 +16,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let timerInterval; 
 
 let questions = [{
         question: 'Who is the all-time top scorer in the UEFA Champions League?',
@@ -61,8 +62,13 @@ let questions = [{
 
 const SCORE_POINTS = 1000;
 const MAX_QUESTIONS = 5;
+const TIME_LIMIT = 10;
 
-// Function to start the game
+let timeLeft = TIME_LIMIT;
+
+/**
+ * Function to start the game
+ **/ 
 function startGame() {
     questionCounter = 0;
     score = 0;
@@ -70,7 +76,9 @@ function startGame() {
     getNewQuestion();
 }
 
-// Main function 
+/**
+ *  Main function 
+ */
 function getNewQuestion() {
     if (isQuizOver()) {
         endQuiz();
@@ -84,30 +92,40 @@ function getNewQuestion() {
     resetTimer(); 
 }
 
-// Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
+/**
+ *  Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
+ */
 function isQuizOver() {
     return availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS;
 }
 
-// Handles logic for ending quiz, saving score, redirecting to end page
+/**
+ * Handles logic for ending quiz, saving score, redirecting to end page
+ */
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
     window.location.assign('/end.html');
 }
 
-// Increment question counter 
+/**
+ * Increment question counter 
+ */
 function incrementQuestionCounter() {
     questionCounter++;
 }
 
-// Updates progress text and progress bar
+/**
+ * Updates progress text and progress bar
+ */
 // Tutorial followed in more detail for progress bar with slight changes made to code 
 function updateProgress() {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 }
 
-// Selects a new question, updates choices displayed and removes old question
+/**
+ * Selects a new question, updates choices displayed and removes old question
+ */
 function updateQuestion() {
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -121,19 +139,25 @@ function updateQuestion() {
     availableQuestions.splice(questionsIndex, 1);
 }
 
-// Allows user to submit an answer
+/**
+ * Allows user to submit an answer
+ */
 function enableAnswering() {
     acceptingAnswers = true;
 }
 
-// Click event for choices
+/**
+ * Click event for choices
+ */
 function setupEventListener(choices) {
     choices.forEach(choice => {
         choice.addEventListener('click', handleChoiceClick);
     });
 }
 
-// Handle click event for a choice
+/**
+ * Handle click event for a choice
+ */
 function handleChoiceClick(e) {
     if(!acceptingAnswers) return;
 
@@ -150,7 +174,9 @@ function handleChoiceClick(e) {
     applyClassAndContinue(selectedChoice, classToApply);
 }
 
-// Determine class to apply based on selected answer
+/** 
+ * Determine class to apply based on selected answer
+ */
 function applyClassAndContinue(selectedChoice, classToApply) {
     selectedChoice.parentElement.classList.add(classToApply);
 
@@ -167,28 +193,27 @@ incrementScore = num => {
 }
 
 // Create Timer for each question
-// Perplexity asked to explain how to create timer but custom made
-const TIME_LIMIT = 10;
-
-let timeLeft = TIME_LIMIT;
-
 function updateTimer() {
-    console.log("update Timer");
     timerText.innerText = `Time left: ${timeLeft}s`
-    decrementTimer();
 }
 
+/**
+ * Resets timer to beginning
+ */
 function resetTimer() {
+    clearInterval(timerInterval); // Clear existing timer
     timeLeft = TIME_LIMIT;
-    console.log('Timer reset to:', timeLeft);
     updateTimer(); // Call updateTimer function to display initial time and show decrementing
+    startTimer();
 }
 
-function decrementTimer() {
-    this.setTimeout(() => {
+/**
+ * Function to start timer countdown
+ */
+function startTimer() {
+    timerInterval = setInterval(() => {
         if (timeLeft > 0) {
             timeLeft--;
-            console.log("Time Left", timeLeft);
             updateTimer();
         } else {
             handleTimeExpired();
@@ -199,6 +224,7 @@ function decrementTimer() {
 
 function handleTimeExpired() {
     acceptingAnswers = false;
+    clearInterval(timerInterval); // Clear timer when time expires
     getNewQuestion(); // Move to next question
 }
 
