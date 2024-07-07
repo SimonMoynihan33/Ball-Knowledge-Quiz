@@ -22,7 +22,7 @@ let questions = [{
         choice1: 'Lionel Messi',
         choice2: 'Robert Lewandowski',
         choice3: 'Cristiano Ronaldo',
-        choice4: 'Karom Benzema',
+        choice4: 'Karim Benzema',
         answer: 3,
     },
     {
@@ -101,7 +101,7 @@ function incrementQuestionCounter() {
 }
 
 // Updates progress text and progress bar
-// Tutorial followed extensively for progress bar
+// Tutorial followed in more detail for progress bar with slight changes made to code 
 function updateProgress() {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
@@ -126,6 +126,7 @@ function enableAnswering() {
     acceptingAnswers = true;
 }
 
+// Click event for choices
 function setupEventListener(choices) {
     choices.forEach(choice => {
         choice.addEventListener('click', handleChoiceClick);
@@ -140,6 +141,7 @@ function handleChoiceClick(e) {
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset['number'];
 
+    // Applies red or green css class to indicate answer
     let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
     if (classToApply === 'correct') {
         incrementScore(SCORE_POINTS);
@@ -165,7 +167,7 @@ incrementScore = num => {
 }
 
 // Create Timer for each question
-// Perplexity asked to explain how to create timer
+// Perplexity asked to explain how to create timer but custom made
 const TIME_LIMIT = 10;
 
 let timeLeft = TIME_LIMIT;
@@ -179,7 +181,7 @@ function updateTimer() {
 function resetTimer() {
     timeLeft = TIME_LIMIT;
     console.log('Timer reset to:', timeLeft);
-    updateTimer(); // Call updateTimer function to display initial time
+    updateTimer(); // Call updateTimer function to display initial time and show decrementing
 }
 
 function decrementTimer() {
@@ -201,5 +203,5 @@ function handleTimeExpired() {
 }
 
 
-setupEventListener(choices);
-startGame();
+setupEventListener(choices); // Call click event listener
+startGame(); // Call start function
