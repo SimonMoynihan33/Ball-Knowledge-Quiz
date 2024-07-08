@@ -1,9 +1,10 @@
-# Quiz
+# Ball Knowledge Quiz
 
-
+Welcome to the Soccer Knowledge Quiz project! This quiz is designed to challenge and enhance your understanding of the world's most popular sport, soccer. Whether you're a passionate fan, a budding player, or just someone looking to test your knowledge, this quiz offers a fun and educational experience. Dive into questions covering the history of soccer, famous players, iconic matches, rules of the game, and much more. Get ready to put your soccer knowledge to the test and see how you score!
 
 ## Why 
 
+Why did I choose this topic? Soccer as a sport is very close to me. It has truly helped me through tougher times in life as an escape, and I believe many people can resonate with that. I watch, and play, as much as I can today and it's often to high point of my day. It's the beautiful game.
 
 ## Table of Contents
 
@@ -19,9 +20,6 @@
 - [Credits](#credits)
 
 ## Creation Structure
-
-
-
 ### Wireframes
 
 ## User Experience
