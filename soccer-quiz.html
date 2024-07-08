@@ -10,42 +10,38 @@
 
 <body class="soccer-quiz">
     <main class="container">
-        <section id="game" class="justify-center flex-column">
-            <header id="hud">
-                <div id="hud-item">
-                    <p id="progressText" class="hud-header">
-                        Question
-                    </p>
-                    <div id="progressBar">
-                        <div id="progressBarFull"></div>
-                    </div>
-                    <div class="hud-item score-container">
-                        <p class="hud-prefix">Score</p>
-                        <h1 class="hud-main-text" id="score">
-                            0
-                        </h1>
-                    </div>
-                    <div id="timer" class="timer-container">
-                        <span id="timer-text">Time left: 10s</span>
-                    </div>
+        <section id="game">
+            <h1 id="progressText" class="hud-header">
+                Question
+            </h1>
+            <div id="progressBar">
+                <div id="progressBarFull"></div>
+            </div>
+            <div id="hud">
+                <div class="hud-item score-container">
+                    <p class="hud-prefix">Score</p>
+                    <p class="hud-main-text" id="score">0</p>
                 </div>
-                <article id="question-container">
-                    <h2 id="question">What is the answer</h2>
-                    <div class="choice-container">
-                        <p class="choice-text" data-number="1">choice 1</p>
-                    </div>
-                    <div class="choice-container">
-                        <p class="choice-text" data-number="2">Choice 2</p>
-                    </div>
-                    <div class="choice-container">
-                        <p class="choice-text" data-number="3">Choice 3</p>
-                    </div>
-                    <div class="choice-container">
-                        <p class="choice-text" data-number="4">Choice 4</p>
-                    </div>
-                    <a href="index.html"><button class="home btn">Home</button></a>
-                </article>
-            </header>
+                <div id="timer" class="timer-container hud-item">
+                    <span id="timer-text">Time left:<br> 10s</span>
+                </div>
+            </div>
+            <article id="question-container">
+                <h2 id="question"><b>What is the answer</b></h2>
+                <div class="choice-container">
+                    <p class="choice-text" data-number="1">choice 1</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" data-number="2">Choice 2</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" data-number="3">Choice 3</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" data-number="4">Choice 4</p>
+                </div>
+                <a href="index.html"><button class="home btn">Home</button></a>
+            </article>
         </section>
     </main>
     <script src="assets/js/script.js"></script>
