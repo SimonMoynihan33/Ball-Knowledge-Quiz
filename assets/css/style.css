@@ -229,6 +229,11 @@ p .choice-text {
     background: red;
 }
 
+/* End page */
+#final-score {
+    color:#1e1e1e;
+}
+
 /* To make fit on mobiles */
 @media screen and (max-width: 768px) {
     .choice-container {
