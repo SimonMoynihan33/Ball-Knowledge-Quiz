@@ -234,15 +234,18 @@ p .choice-text {
 /* End page */
 #end {
     text-align: center;
+    background: #101820;
+    height: 100vh;
+    width: 100vw;
 }
 
 #score-text {
-    color: #101820;
+    color: #ffffff;
 }
 
 #final-score {
     font-size: 1.5rem;
-    color:#1e1e1e;
+    color: #FEE715;
 }
 
 /* To make fit on mobiles */
