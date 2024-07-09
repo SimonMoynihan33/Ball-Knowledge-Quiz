@@ -146,7 +146,7 @@ function isQuizOver() {
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
     console.log('navigating to end.html file');
-    window.location.replace('../../end.html');
+    window.location.replace('/end.html');
 }
 
 /**
