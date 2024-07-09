@@ -10,6 +10,7 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 const timerText = document.querySelector('#timer-text');
+const finalScore = document.querySelector('#final-score');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -91,7 +92,7 @@ let questions = [{
         answer: 3,
     },
     {
-        question: 'Who holds the record for most goals scored in a premier league season?',
+        question: 'Who holds the record for most goals scored in the Premier League?',
         choice1: 'Thierry Henry',
         choice2: 'Alan Shearer',
         choice3: 'Wayne Rooney',
@@ -143,8 +144,8 @@ function isQuizOver() {
  * Handles logic for ending quiz, saving score, redirecting to end page
  */
 function endQuiz() {
-    localStorage.setItem('mostRecentScore', score);
     window.location.assign('/end.html');
+    displayScore();
 }
 
 /**
@@ -269,6 +270,12 @@ function handleTimeExpired() {
     getNewQuestion(); // Move to next question
 }
 
+/**
+ * Function to display final score
+ */
+function displayScore() {
+    finalScore.textContent = `Your final score was: ${score}`;
+}
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function
