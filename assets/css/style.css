@@ -15,10 +15,10 @@
     margin: 0;
     /* Gradient color for background. */
     background: linear-gradient(to right,
-            #101820, 0%,
-            #101820, 50%,
-            #FEE715 10%,
-            #FEE715 100%);
+            #0b0c10, 0%,
+            #0b0c10, 40%,
+            #101820 60%,
+            #101820 100%);
 }
 
 /* Hides all items with this class */
@@ -91,7 +91,7 @@ a {
 
 .sports {
     color: #1e1e1e;
-    background: #FEE715;
+    background: #66fcf1;
 }
 
 /* Activates when button is hovered with cursor */
@@ -130,7 +130,11 @@ a {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: #101820;
+    background: linear-gradient(to right,
+            #0b0c10, 0%,
+            #0b0c10, 40%,
+            #101820 60%,
+            #101820 100%);
 }
 
 .rules-container {
@@ -148,7 +152,7 @@ a {
 
 /* Soccer quiz page */
 .soccer-quiz {
-    background: url(../images/pitch-bg.webp) no-repeat center center/cover;
+    background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
     color: #101820;
     font-size: 1.5rem;
     height: 100vh;
@@ -165,7 +169,7 @@ a {
     margin-bottom: 1rem;
     width: 100%;
     border-radius: 4px;
-    background: #FEE715;
+    background: #66fcf1;
     min-width: 60%;
     max-width: 80%;
     height: 2rem;
@@ -186,7 +190,7 @@ a {
 /* Adds style when hovering over answers */
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 .4rem 1rem 0 #FEE715;
+    box-shadow: 0 .4rem 1rem 0 #66fcf1;
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -208,14 +212,14 @@ a {
 #progressBar {
     width: 90%;
     height: 40px;
-    border: 0.2rem solid #FEE715;
+    border: 0.2rem solid #66fcf1;
     border-radius: 20px;
     overflow: hidden;
 }
 
 #progressBarFull {
     height: 100%;
-    background: #FEE715;
+    background: #66fcf1;
     width: 0%;
 }
 
@@ -242,7 +246,7 @@ a {
 
 #final-score {
     font-size: 1.5rem;
-    color: #FEE715;
+    color: #66fcf1;
 }
 /* Query Selectors */
 /*@media screen and (min-width: 768px){
