@@ -21,6 +21,18 @@ Why did I choose this topic? Soccer as a sport is very close to me. It has truly
 
 ## Creation Structure
 ### Wireframes
+- Difficulty
+
+![Difficulty Desktop](docs/images/wf-difficulty-desktop.webp) ![Difficulty Mobile](docs/images/wf-difficulty-mobile.webp)
+
+- Questions 
+
+![Questions Desktop](docs/images/wf-questions-desktop.webp) ![Questions Mobile](docs/images/wf-questions-mobile.webp)
+
+- Results
+
+![Results Desktop](docs/images/wf-results-desktop.webp)
+
 
 ## User Experience
 
