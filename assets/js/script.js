@@ -10,8 +10,7 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 const timerText = document.querySelector('#timer-text');
-const finalScore = document.querySelector('#final-score');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -147,6 +146,7 @@ function isQuizOver() {
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
     window.location.assign('/end.html');
+    displayFinalScore();
 }
 
 /**
@@ -272,9 +272,16 @@ function handleTimeExpired() {
 }
 
 /**
- * Function to display final score
+ * Display final score
  */
-finalScore.innerText = mostRecentScore;
+if (window.location.pathname === '/end.html') {
+    const finalScore = document.querySelector('#final-score');
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    finalScore.innerText = mostRecentScore;
+} else {
+    setupEventListener(choices); // Call click event listener
+    startGame(); // Call start function
+}
 
 
 setupEventListener(choices); // Call click event listener
