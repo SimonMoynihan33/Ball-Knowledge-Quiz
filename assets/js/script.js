@@ -130,7 +130,7 @@ function getNewQuestion() {
     updateProgress();
     updateQuestion();
     enableAnswering();
-    resetTimer(); 
+    // resetTimer(); 
 }
 
 /**
@@ -146,7 +146,6 @@ function isQuizOver() {
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
     window.location.assign('/end.html');
-    displayFinalScore();
 }
 
 /**

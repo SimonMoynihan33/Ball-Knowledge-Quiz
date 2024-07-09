@@ -156,6 +156,11 @@ h1 {
     background: url(../images/pitch-bg.webp) no-repeat center center/cover;
     color: #101820;
     font-size: 1.5rem;
+    height: 100vh;
+}
+
+.soccer-quiz h1, #question-container h2 {
+    color: #000000
 }
 
 .choice-container {
@@ -164,7 +169,8 @@ h1 {
     width: 100%;
     border-radius: 4px;
     background: #FEE715;
-    min-width: 50%;
+    min-width: 60%;
+    max-width: 80%;
     height: 4rem;
 }
 
@@ -247,10 +253,9 @@ p .choice-text {
     font-size: 1.5rem;
     color: #FEE715;
 }
-
-/* To make fit on mobiles */
-@media screen and (max-width: 768px) {
+/* Query Selectors */
+@media screen and (min-width: 768px){
     .choice-container {
-        min-width: 100px;
+
     }
-}
+} 
