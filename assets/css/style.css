@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
 
+/* Asterisk for general selector */
 * {
     font-family: 'Nova Round', system-ui;
 }
 
+/* Home page styles */
 #home {
     color: #ffffff;
     text-align: center;
@@ -24,17 +26,20 @@
     display: none;
 }
 
+/* Hides link decoration on h1 */
 h1,
 a {
     text-decoration: none;
     color: #ffffff;
 }
 
-h1 {
+/* Style h1 for home */
+#home h1 {
     text-align: center;
     font-size: 2em;
 }
 
+/* Container class */
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -43,7 +48,6 @@ h1 {
 }
 
 /* Card for each quiz to be shown on */
-.video-games,
 .soccer {
     width: 500px;
     height: 400px;
@@ -53,11 +57,10 @@ h1 {
     margin-bottom: 30px;
 }
 
-.sports-image,
-.games-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.sports-image {
+    /* Got from google search/Credited in ReadMe */
+    background: url(../images/rooneybc-quiz.webp) no-repeat center center/cover;
     height: 300px;
     width: 100%;
     max-width: 500px;
@@ -80,7 +83,8 @@ h1 {
     border: 2px solid #1e1e1e;
 }
 
-.games {
+/* Button (a) styling */
+.home {
     color: #1e1e1e;
     background: #ffffff;
 }
@@ -98,20 +102,10 @@ h1 {
     transform: scale(1.02);
 }
 
-/* Got from google search/Credited in ReadMe */
-.sports-image {
-    background: url(../images/rooneybc-quiz.webp) no-repeat center center/cover;
-
-}
-
-.games-image {
-    background: url(../images/gow-ragnarok-quiz\ \(1\).webp) no-repeat center center/cover;
-}
-
-/* Soccer html page */
+/* Soccer rules page */
 .rules {
     margin: 0;
-    list-style-position: inside;
+    list-style-type: none;
     margin-bottom: 50px;
     padding: 0;
     line-height: 2.5rem;
@@ -127,6 +121,7 @@ h1 {
     font-size: 1.2rem;
 }
 
+/* General styles for rules page */
 #soccer {
     font-family: 'Nova Round', system-ui;
     color: #ffffff;
@@ -160,24 +155,28 @@ h1 {
 }
 
 .soccer-quiz h1, #question-container h2 {
-    color: #000000
+    color: #000000;
+    font-size: 1rem;
 }
 
 .choice-container {
     display: flex;
+    font-size: .7rem;
     margin-bottom: 1rem;
     width: 100%;
     border-radius: 4px;
     background: #FEE715;
     min-width: 60%;
     max-width: 80%;
-    height: 4rem;
+    height: 2rem;
 }
 
+/* HUD items (timer, score) */
 #hud {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: .8rem;
 }
 
 #question {
@@ -192,6 +191,7 @@ h1 {
     transform: transform 100ms;
 }
 
+/* Choices styles */
 .choice-text {
     width: 100%;
     height: 100%;
@@ -202,15 +202,6 @@ h1 {
 
 .choice-text {
     display: flex;
-}
-
-p .choice-text {
-    align-items: center;
-}
-
-#timer {
-    align-items: center;
-    align-self: center;
 }
 
 /* Progress Bar */
@@ -254,8 +245,8 @@ p .choice-text {
     color: #FEE715;
 }
 /* Query Selectors */
-@media screen and (min-width: 768px){
+/*@media screen and (min-width: 768px){
     .choice-container {
 
     }
-} 
+} */
