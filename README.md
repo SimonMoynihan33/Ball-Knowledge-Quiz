@@ -163,6 +163,28 @@ Secondly, I reached out to tutor support. Gemma and I spent about 30-40 minutes 
 
 Next, I removed the ```decrementTimer();``` function within itself and called it within the ```updateTimer();``` function instead. This is cleaner as the function was not calling itself from inside itself, but did not solve the issue. I also added multiple console.log's throughout the ```decrementTimer();```, ```updateTimer();``` and ```resetTimer();``` respectively, showing that it was indeed decrementing by one second, but that was happening twice *per second*.
 
+#### Bug 7
+
+Issue - Could not get score to show on end.html
+
+Cause - Code had to be activating only on end.html page, and score had to be saved to local storage
+
+Fix - 
+```
+if (window.location.pathname === '/end.html') {
+    const finalScore = document.querySelector('#final-score');
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    finalScore.innerText = Number(mostRecentScore);
+} else {
+    setupEventListener(choices); // Call click event listener
+    startGame(); // Call start function
+}
+```
+#### Bug 8
+
+Issue - Relative file path not working in JS. When the quiz is finished the end.html page won't show.
+
+
 ## Credits
 - Photos 
 - Youtube tutorial https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=PLmEz6BxNwVPc-oP7rMw_oJ7yssN0jT844&index=2 By 'Brian Design'

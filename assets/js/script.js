@@ -130,7 +130,7 @@ function getNewQuestion() {
     updateProgress();
     updateQuestion();
     enableAnswering();
-    // resetTimer(); 
+    resetTimer(); 
 }
 
 /**
