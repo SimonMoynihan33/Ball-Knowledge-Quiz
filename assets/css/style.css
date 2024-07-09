@@ -68,7 +68,7 @@ h1 {
 
 /* Style Buttons */
 .btn {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 8px;
     height: 15px;
     margin: 5px;
@@ -110,9 +110,21 @@ h1 {
 
 /* Soccer html page */
 .rules {
-    line-height: 2rem;
+    margin: 0;
+    list-style-position: inside;
+    margin-bottom: 50px;
+    padding: 0;
+    line-height: 2.5rem;
     font-size: .7rem;
-    text-align: center;
+    line-height: 20px;
+}
+
+.rules-container h1 {
+    font-size: 1.4rem;
+}
+
+.rules-container h2 {
+    font-size: 1.2rem;
 }
 
 #soccer {
