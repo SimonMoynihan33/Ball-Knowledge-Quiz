@@ -145,7 +145,8 @@ function isQuizOver() {
  */
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
-    window.location.href('../../end.html');
+    console.log('navigating to end.html file');
+    window.location.replace('../../end.html');
 }
 
 /**
