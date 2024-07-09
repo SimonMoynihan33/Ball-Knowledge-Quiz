@@ -150,6 +150,10 @@ a {
     height: 100vh;
 }
 
+#quiz {
+    width: 80%;
+}
+
 .soccer-quiz h1, #question-container h2 {
     color: #ffffff;
     font-size: 1rem;
@@ -264,7 +268,7 @@ a {
     }
 
     .choice-text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .choice-container {
@@ -274,10 +278,10 @@ a {
 
     .soccer-quiz h1, #question-container h2 {
         color: #ffffff;
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     #hud {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 } 
