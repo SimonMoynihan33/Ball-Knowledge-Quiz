@@ -284,4 +284,8 @@ a {
     #hud {
         font-size: 1.6rem;
     }
+
+    #quiz {
+        width: 90%;
+    }
 } 
