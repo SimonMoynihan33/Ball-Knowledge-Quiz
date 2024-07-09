@@ -168,16 +168,6 @@ h1 {
     height: 4rem;
 }
 
-/*.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}*/
-
 #hud {
     display: flex;
     flex-direction: row;
@@ -213,7 +203,6 @@ p .choice-text {
 }
 
 #timer {
-    display: flex;
     align-items: center;
     align-self: center;
 }

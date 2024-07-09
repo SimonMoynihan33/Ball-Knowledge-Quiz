@@ -237,7 +237,7 @@ incrementScore = num => {
 // Create Timer for each question
 
 function updateTimer() {
-    timerText.innerText = `Time left: ${timeLeft}s`
+    timerText.innerText = `${timeLeft}s`
 }
 
 /**
