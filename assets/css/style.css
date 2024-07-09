@@ -260,4 +260,13 @@ a {
         font-size: 1.6rem;
         line-height: 30px;
     }
+
+    .choice-text {
+        font-size: 1.5rem;
+    }
+
+    .choice-container {
+        height: 4rem;
+        width: 700px;
+    }
 } 
