@@ -11,6 +11,7 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 const timerText = document.querySelector('#timer-text');
 const finalScore = document.querySelector('#final-score');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -141,11 +142,11 @@ function isQuizOver() {
 }
 
 /**
- * Handles logic for ending quiz, saving score, redirecting to end page
+ * Handles logic for ending quiz, displaying score, redirecting to end page
  */
 function endQuiz() {
+    localStorage.setItem('mostRecentScore', score);
     window.location.assign('/end.html');
-    displayScore();
 }
 
 /**
@@ -273,9 +274,8 @@ function handleTimeExpired() {
 /**
  * Function to display final score
  */
-function displayScore() {
-    finalScore.textContent = `Your final score was: ${score}`;
-}
+finalScore.innerText = mostRecentScore;
+
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function

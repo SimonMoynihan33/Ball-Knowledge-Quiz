@@ -243,7 +243,16 @@ p .choice-text {
 }
 
 /* End page */
+#end {
+    text-align: center;
+}
+
+#score-text {
+    color: #101820;
+}
+
 #final-score {
+    font-size: 1.5rem;
     color:#1e1e1e;
 }
 
