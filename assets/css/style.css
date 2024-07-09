@@ -234,6 +234,7 @@ a {
 }
 
 #score-text {
+    margin-top: 200px;
     color: #ffffff;
 }
 
@@ -241,6 +242,7 @@ a {
     font-size: 1.5rem;
     color: #66fcf1;
 }
+
 /* Query Selectors */
 @media screen and (min-width: 768px){
     .container {
@@ -268,5 +270,14 @@ a {
     .choice-container {
         height: 4rem;
         width: 700px;
+    }
+
+    .soccer-quiz h1, #question-container h2 {
+        color: #ffffff;
+        font-size: 2rem;
+    }
+
+    #hud {
+        font-size: 1.8rem;
     }
 } 

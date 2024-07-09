@@ -145,7 +145,7 @@ function isQuizOver() {
  */
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
-    window.location.assign('../../end.html');
+    window.location.assign('https://simonmoynihan33.github.io/end.html');
 }
 
 /**
@@ -273,7 +273,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname === '../../end.html') {
+if (window.location.pathname === 'https://simonmoynihan33.github.io/end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = Number(mostRecentScore);
