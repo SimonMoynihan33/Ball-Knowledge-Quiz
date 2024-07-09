@@ -114,6 +114,7 @@ a {
 
 .rules-container h2 {
     font-size: 1.2rem;
+    color: #66fcf1
 }
 
 /* General styles for rules page */
@@ -241,8 +242,22 @@ a {
     color: #66fcf1;
 }
 /* Query Selectors */
-/*@media screen and (min-width: 768px){
-    .choice-container {
-
+@media screen and (min-width: 768px){
+    .container {
+        height: fit-content;
+        font-size: larger;
     }
-} */
+
+    .rules-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .rules-container h2 {
+        font-size: 2rem;
+    }
+
+    .rules {
+        font-size: 1.6rem;
+        line-height: 30px;
+    }
+} 
