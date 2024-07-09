@@ -277,11 +277,21 @@ if (window.location.pathname === '/end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = mostRecentScore;
+    const finalScoreValue = Number(mostRecentScore); // Convert to number
 } else {
     setupEventListener(choices); // Call click event listener
     startGame(); // Call start function
 }
 
+if (finalScoreValue === 10000) {
+    alert('Perfect Score, Well done!');
+} else if (finalScoreValue >= 8000) {
+    alert(`Nice! You got ${mostRecentScore}. Doesn't get much better than that`);
+} else if (finalScoreValue >= 5000) {
+    alert(`Not bad. You got ${mostRecentScore}. Want to go for higher?`);
+} else {
+    alert(`Come on, you can do better than that! You got ${mostRecentScore}`)
+}
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function

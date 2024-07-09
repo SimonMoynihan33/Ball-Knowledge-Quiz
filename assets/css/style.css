@@ -13,12 +13,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    /* Gradient color for background. */
-    background: linear-gradient(to right,
-            #0b0c10, 0%,
-            #0b0c10, 40%,
-            #101820 60%,
-            #101820 100%);
+    background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
 /* Hides all items with this class */
@@ -130,11 +125,7 @@ a {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right,
-            #0b0c10, 0%,
-            #0b0c10, 40%,
-            #101820 60%,
-            #101820 100%);
+    background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
 .rules-container {
@@ -144,7 +135,7 @@ a {
     transform: translate(-50%, -50%);
     width: 60vw;
     height: 80vh;
-    background: #81818149;
+    background: #26262670;
     border-radius: 30px;
     padding: 50px 20px;
     margin-bottom: 30px;
@@ -159,7 +150,7 @@ a {
 }
 
 .soccer-quiz h1, #question-container h2 {
-    color: #000000;
+    color: #ffffff;
     font-size: 1rem;
 }
 
@@ -181,6 +172,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     font-size: .8rem;
+    color: #fff;
 }
 
 #question {
@@ -211,7 +203,7 @@ a {
 /* Progress Bar */
 #progressBar {
     width: 90%;
-    height: 40px;
+    height: 10px;
     border: 0.2rem solid #66fcf1;
     border-radius: 20px;
     overflow: hidden;
@@ -235,7 +227,7 @@ a {
 /* End page */
 #end {
     text-align: center;
-    background: #101820;
+    background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
     height: 100vh;
     width: 100vw;
 }
