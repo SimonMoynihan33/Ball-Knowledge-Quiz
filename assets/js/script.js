@@ -233,7 +233,7 @@ incrementScore = num => {
 }
 
 // Create Timer for each question
-/*
+
 function updateTimer() {
     timerText.innerText = `Time left: ${timeLeft}s`
 }
@@ -241,7 +241,7 @@ function updateTimer() {
 /**
  * Resets timer to beginning
  */
-/*function resetTimer() {
+function resetTimer() {
     clearInterval(timerInterval); // Clear existing timer
     timeLeft = TIME_LIMIT;
     updateTimer(); // Call updateTimer function to display initial time and show decrementing
@@ -251,7 +251,7 @@ function updateTimer() {
 /**
  * Function to start timer countdown
  */
-/*function startTimer() {
+function startTimer() {
     timerInterval = setInterval(() => {
         if (timeLeft > 0) {
             timeLeft--;
@@ -267,7 +267,7 @@ function handleTimeExpired() {
     acceptingAnswers = false;
     clearInterval(timerInterval); // Clear timer when time expires
     getNewQuestion(); // Move to next question
-}*/
+}
 
 
 setupEventListener(choices); // Call click event listener
