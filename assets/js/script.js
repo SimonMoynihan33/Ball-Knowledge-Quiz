@@ -58,10 +58,50 @@ let questions = [{
         choice4: 'Luka Modric',
         answer: 3,
     },
+    {
+        question: 'Which club has won the most UEFA Champions League titles as of 2024?',
+        choice1: 'Barcelona',
+        choice2: 'AC Milan',
+        choice3: 'Bayern Munich',
+        choice4: 'Real Madrid',
+        answer: 4,
+    },
+    {
+        question: 'Who is the heighest goal scorer in history',
+        choice1: 'Lionel Messi',
+        choice2: 'Maradonna',
+        choice3: 'Pele',
+        choice4: 'Cristiano Ronaldo',
+        answer: 4,
+    },
+    {
+        question: 'Who won the first ever Premier League title in 1992/93?',
+        choice1: 'Manchester United',
+        choice2: 'Liverpool',
+        choice3: 'Newcastle',
+        choice4: 'Arsenal',
+        answer: 1,
+    },
+    {
+        question: 'In which year did England win their only World Cup title?',
+        choice1: '1963',
+        choice2: '1956',
+        choice3: '1966',
+        choice4: '1968',
+        answer: 3,
+    },
+    {
+        question: 'Who holds the record for most goals scored in a premier league season?',
+        choice1: 'Thierry Henry',
+        choice2: 'Alan Shearer',
+        choice3: 'Wayne Rooney',
+        choice4: 'Mohammed Salah',
+        answer: 2,
+    },
 ]
 
 const SCORE_POINTS = 1000;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 10;
 const TIME_LIMIT = 10;
 
 let timeLeft = TIME_LIMIT;
