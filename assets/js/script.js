@@ -104,8 +104,9 @@ const questions = [{
 ];
 
 const SCORE_POINTS = 1000;
+const HINT_POINTS = 500;
 const MAX_QUESTIONS = 10;
-const TIME_LIMIT = 10;
+const TIME_LIMIT = 15;
 
 let timeLeft = TIME_LIMIT;
 
@@ -133,6 +134,7 @@ function getNewQuestion() {
     updateQuestion();
     enableAnswering();
     resetTimer();
+    resetHint();
 }
 
 /**
@@ -188,6 +190,7 @@ function updateQuestion() {
         const number = choice.dataset['number'];
         if (choice) {
             choice.innerText = currentQuestion['choice' + number];
+            choice.classList.remove('hidden'); // Ensure choices are visible again
         }
     });
 
@@ -261,11 +264,15 @@ function useHint() {
     if (hintUsed) return;
 
     hintUsed = true;
-    
+
     let incorrectAnswers = choices.filter(choice => choice.dataset['number'] != currentQuestion.answer);
-    incorrectAnswers.sort(() => Math.random() - 0.5);
+    console.log("Incorrect answers before shuffle:", incorrectAnswers);
+    incorrectAnswers.sort(() => Math.random() - 0.5); // Shuffle the incorrect answers
+    console.log("Incorrect answers after shuffle:", incorrectAnswers);
+
     incorrectAnswers.slice(0, 2).forEach(choice => {
-        choice.parentElement.classList.add('hidden');
+        console.log("Hiding choice:", choice);
+        choice.classList.add('hidden'); // Add 'hidden' class to hide the incorrect answers
     });
 
     hintButton.disabled = true;

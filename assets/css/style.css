@@ -271,6 +271,11 @@ a {
     color: #66fcf1;
 }
 
+/* Hide choices after hint is used */
+.choice-container .hidden {
+    display: none;
+}
+
 /* Query Selectors */
 @media screen and (min-width: 768px) {
 
@@ -355,7 +360,7 @@ a {
         cursor: pointer;
         box-shadow: 0 0.4rem 1.4rem 0;
         transition: 150ms;
-        transform: scale(1.4);
+        transform: scale(1.04);
     }
 
     /* Choices in quiz */
