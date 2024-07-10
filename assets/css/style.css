@@ -16,10 +16,6 @@
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
-/* Hides all items with this class */
-.hidden {
-    display: none;
-}
 
 /* Hides link decoration on h1 */
 h1,
@@ -31,7 +27,9 @@ a {
 /* Style h1 for home */
 #home h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.7rem;
+    padding-top: 80px;
+
 }
 
 /* Container class */
@@ -40,6 +38,8 @@ a {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Card for each quiz to be shown on */
@@ -134,7 +134,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60vw;
-    height: 80vh;
+    height: fit-content;
     background: #262626;
     border-radius: 30px;
     padding: 50px 20px;
@@ -156,12 +156,12 @@ a {
 .soccer-quiz h1,
 #question-container h2 {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .choice-container {
     display: flex;
-    font-size: .7rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     width: 100%;
     border-radius: 4px;
@@ -176,7 +176,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: .8rem;
+    font-size: 1rem;
     color: #fff;
 }
 
@@ -312,49 +312,33 @@ a {
 /* Laptops and larger */
 @media screen and (min-width: 992px) {
     #home h1 {
-        font-size: 3rem;
-    }
-
-    .soccer {
-        height: 60vh;
-        width: 80vw;
-        font-size: 2.5rem;
-    }
-
-    .sports-image {
-        width: 100%;
-        height: 70%;
-    }
-
-    .btn {
         font-size: 2rem;
     }
 
-    .rules-container {
-        height: 60vh;
+    .btn {
+        font-size: 1.2rem;
     }
 
     /* Choices in quiz */
     .choice-text {
-        font-size: 2.2rem;
+        font-size: 1.3rem;
     }
 
     /* Container holding choices */
     .choice-container {
-        height: 4.5rem;
-        width: 1000px;
+        height: 3.5rem;
     }
 
     /* Quiz question and number of questions heading */
     .soccer-quiz h1,
     #question-container h2 {
         color: #ffffff;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     /* HUD items (timer, score) */
     #hud {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     /* Width of quiz section so it remains the same with for each question */
@@ -368,12 +352,26 @@ a {
 }
 
 @media screen and (min-width: 1440px) {
-    .soccer {
-        height: 70vh;
-        width: 70vw;
+    .rules-container h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #home h1 {
+        font-size: 4.5rem;
     }
 
-    .rules-container h1 {
-        font-size: 3.2rem;
+    .sports-quiz {
+        font-size: 3.5rem;
     }
+
+    .sports-image {
+        margin-bottom: 60px;
+    }
+
+    .btn {
+        font-size: 3.5rem;
+    }
+    
 }
