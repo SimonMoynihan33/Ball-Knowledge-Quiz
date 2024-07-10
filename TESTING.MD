@@ -181,3 +181,7 @@ Issue - Relative file path not working in JS. When the quiz is finished the end.
 #### Bug 9 
 
 Issue - White space at the bottom of screen on home page
+
+Cause - Added img element in html to have an alt tag but never set the display to hidden
+
+Fix - Add ```class="hidden"``` to img tag and ```display: none;``` to hidden class in css
