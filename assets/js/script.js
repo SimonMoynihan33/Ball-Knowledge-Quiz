@@ -274,7 +274,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname === 'end.html') {
+if (window.location.pathname === '/end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = Number(mostRecentScore);
@@ -283,7 +283,7 @@ if (window.location.pathname === 'end.html') {
     startGame(); // Call start function
 }
 
-if (mostRecentScore === 10000) {
+/*if (mostRecentScore = 10000) {
     alert('Perfect Score, Well done!');
 } else if (mostRecentScore >= 8000) {
     alert(`Nice! You got ${mostRecentScore}. Doesn't get much better than that`);
@@ -291,7 +291,7 @@ if (mostRecentScore === 10000) {
     alert(`Not bad. You got ${mostRecentScore}. Want to go for higher?`);
 } else {
     alert(`Come on, you can do better than that! You got ${mostRecentScore}`)
-}
+}*/
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function
