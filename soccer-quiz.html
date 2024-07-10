@@ -9,13 +9,17 @@
 </head>
 
 <!-- Quiz section -->
+
 <body class="soccer-quiz">
     <main class="container">
         <section id="quiz">
+            <div id="heading">
             <!-- Progress -->
             <h1 id="progressText" class="hud-header">
                 Question
             </h1>
+            <a class="homebtn btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </div>
             <div id="progressBar">
                 <div id="progressBarFull"></div>
             </div>
@@ -34,7 +38,7 @@
                 </div>
             </div>
             <!-- Questions and answer options -->
-            <section id="question-container">
+            <section id="question-container" class="container">
                 <h2 id="question"><b>What is the answer</b></h2>
                 <div class="choice-container">
                     <p class="choice-text" data-number="1">choice 1</p>
@@ -48,17 +52,18 @@
                 <div class="choice-container">
                     <p class="choice-text" data-number="4">Choice 4</p>
                 </div>
-                <a class="homebtn btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
             </section>
+
         </section>
     </main>
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/62e39d5211.js" crossorigin="anonymous"></script>
-     <!-- No script error -->
-     <noscript>
+    <!-- No script error -->
+    <noscript>
         <h1>JavaScript Required</h1>
         <p>
-            Your browser does not support JavaScript or it is disabled. Please change your browser or enable it for the use of JavaScript to play this game.
+            Your browser does not support JavaScript or it is disabled. Please change your browser or enable it for the
+            use of JavaScript to play this game.
         </p>
     </noscript>
 </body>

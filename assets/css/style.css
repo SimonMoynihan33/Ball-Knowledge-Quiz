@@ -133,6 +133,7 @@ a {
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
+/* Rules */
 .rules-container {
     position: absolute;
     top: 50%;
@@ -146,7 +147,7 @@ a {
     margin-bottom: 30px;
 }
 
-/* Soccer quiz page */
+/* Quiz page */
 .soccer-quiz {
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
     color: #101820;
@@ -154,8 +155,21 @@ a {
     height: 100vh;
 }
 
+/* H1 and home button for quiz page */
+#heading {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#heading a {
+    align-self: end;
+}
+
+/* Section of entire quiz page */
 #quiz {
     width: 80%;
+    background: rgba(0, 0, 0, .6);
 }
 
 .soccer-quiz h1,
@@ -164,6 +178,7 @@ a {
     font-size: 1.3rem;
 }
 
+/* Containers containing answer choices */
 .choice-container {
     display: flex;
     font-size: 1rem;
@@ -217,7 +232,7 @@ a {
 
 /* Progress Bar */
 #progressBar {
-    width: 90%;
+    width:100%;
     height: 10px;
     border: 0.2rem solid #66fcf1;
     border-radius: 20px;
