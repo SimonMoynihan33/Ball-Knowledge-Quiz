@@ -289,9 +289,9 @@ function handleTimeExpired() {
  */
 if (window.location.pathname.endsWith('/end.html')) {
     const finalScore = document.querySelector('#final-score');
-    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    const lastScore = localStorage.getItem('mostRecentScore');
     if (finalScore) {
-        finalScore.innerText = Number(mostRecentScore);
+        finalScore.innerText = Number(lastScore);
     }
 } else {
     setupEventListener(choices); // Call click event listener
