@@ -47,6 +47,8 @@ No errors were found when passing through the official Jigsaw validator via dire
   
 
 - JS 
+No errors were found when passing through the official 
+
 - WAVE
   - Each page was put through [WAVE](https://wave.webaim.org/) evaluation tool and any errors found were fixed.
 
@@ -175,3 +177,7 @@ if (window.location.pathname === '/end.html') {
 #### Bug 8
 
 Issue - Relative file path not working in JS. When the quiz is finished the end.html page won't show on live site.
+
+#### Bug 9 
+
+Issue - White space at the bottom of screen on home page

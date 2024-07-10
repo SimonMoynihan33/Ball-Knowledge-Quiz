@@ -9,7 +9,7 @@
 #home {
     color: #ffffff;
     text-align: center;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -42,7 +42,7 @@ a {
     margin-right: 10px;
 }
 
-/* Card for each quiz to be shown on */
+/* Card for quiz to be shown on */
 .soccer {
     width: 500px;
     height: 400px;
@@ -78,7 +78,7 @@ a {
 }
 
 /* Button (a) styling */
-.home {
+.homebtn {
     color: #1e1e1e;
     background: #ffffff;
 }
