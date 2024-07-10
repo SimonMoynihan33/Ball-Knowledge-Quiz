@@ -291,7 +291,7 @@ if (window.location.pathname.endsWith('end.html')) {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     if (finalScore) {
-        finalScore.innerText = mostRecentScore;
+        finalScore.innerText = Number(score);
     }
 } else {
     setupEventListener(choices); // Call click event listener

@@ -26,7 +26,7 @@ No issues were found when using Microsoft Bing
 
 - Safari on mobile
 
-
+No issues were found when using Safari on mobile
 
 ### Lighthouse scores
 #### Desktop
