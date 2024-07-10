@@ -10,6 +10,7 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 const timerText = document.querySelector('#timer-text');
+const hintButton = document.getElementById('hint-btn');
 
 
 let currentQuestion = {};
@@ -18,6 +19,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let timerInterval;
+let hintUsed = false;
 
 const questions = [{
         question: 'Who is the all-time top scorer in the UEFA Champions League?',
@@ -68,7 +70,7 @@ const questions = [{
         answer: 4,
     },
     {
-        question: 'Who is the highest goal scorer in history',
+        question: 'Who is the highest recorded goal scorer in all competitions?',
         choice1: 'Lionel Messi',
         choice2: 'Maradona',
         choice3: 'Pele',

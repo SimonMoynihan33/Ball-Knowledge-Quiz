@@ -185,6 +185,7 @@ a {
     color: #fff;
 }
 
+/* Button to activate hint */
 #hint-btn {
     display: block;
     font-size: 1.3rem;
@@ -328,6 +329,7 @@ a {
         font-size: 1.2rem;
     }
 
+    /* Activates when hint button is hovered */
     #hint-btn:hover {
         cursor: pointer;
         box-shadow: 0 .4rem 1rem 0 #66fcf1;
