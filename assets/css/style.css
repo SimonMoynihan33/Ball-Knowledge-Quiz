@@ -288,4 +288,12 @@ a {
     #quiz {
         width: 90%;
     }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+
+    #final-score {
+        font-size: 2.4rem;
+    }
 } 
