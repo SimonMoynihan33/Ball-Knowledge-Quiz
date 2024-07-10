@@ -39,17 +39,23 @@ Due to having no backend and having to use local storage, which is limited in it
 
 ## User Experience
 
-
+Users who come to this web app will be greeted with a sleek homepage, with a nice color pallette, featuring a light blue color on buttons and some text and a dark black background image. This hopes to promote a positive and memorable user experience.
 
 ### First Time Users
 
-#### Goals for first time users
-
+First time users want to:
+- Understand what the site is
+- Easily access the quiz
+- Be informed of the rules
+- Track their score
 
 ### Repeat Users
 
+Users who wish to use the site more than once can do so, hoping to improve on their score with each subsequent attempt. A good foundation has been built and can be used as a springboard to make this app much larger scale. In the future more quiz options will be added, with varying difficulties and more niche quizzes, such as specific tournaments and teams.
 
 ## Goals
+
+The goal of this weba app is to test the users knowledge of the sport, and also educate while allowing users to enjoy the experience and feel rewarded afterwards either for good knowledge of the sport, or learning and increasing their expertise.
 
 ## Features
 
@@ -62,6 +68,14 @@ Due to having no backend and having to use local storage, which is limited in it
 
 
 ## Future Deployment
+
+As stated in the [Repeat Users](#repeat-users) section, there are many plans for future deployment. This web app can be used as a foundation to create a plethera of different quizzes relating to the beautiful game of soccer. Some of these include:
+- More Questions for the quiz
+- More difficulties
+- Niche quizzes for specific teams or tournaments
+- A leaderboard with backend support
+- An option to create your own quiz
+- After all this is implemented, adding more games to make the site as accessible as possible to everybody
 
 ## Testing 
 [Testing](/TESTING.MD)
