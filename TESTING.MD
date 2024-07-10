@@ -199,6 +199,17 @@ Cause - Added img element in html to have an alt tag but never set the display t
 
 Fix - Add ```class="hidden"``` to img tag and ```display: none;``` to hidden class in css
 
+#### Bug 10
+
+Issue - Hint button not working
+
+Troubleshooting - I found it would only apply when ```!important``` was used in the hidden class, leading me to realise the issue was due to specificity
+
+Cause - CSS specificity
+
+Fix - Add new CSS code ```.choice-container .hidden {display: none;}``` to increase specificity and apply hidden class
+
+
 ## Unfixed Bugs
 
 There are no bugs I have left unfixed.

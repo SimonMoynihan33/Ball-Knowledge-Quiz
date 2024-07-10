@@ -86,6 +86,12 @@ Some of these features include :
 
 ![Timer](docs/images/timer.png)
 
+- Hint Button, which hides two incorrect answers from the user and does not allow clicking, but only incrementing your score by half when clicked
+
+![Hint Button](docs/images/hint-btn.png)
+
+![Hint Result](docs/images/hint-result.png)
+
 - Questions and choices, changing each time a user answers or the timer hitz zero, and giving feedback whether the answer was correct or incorrect 
 
 ![Questions and answers](docs/images/questions-choices.png)
@@ -103,6 +109,10 @@ Some of these features include :
 ## Design
 
 The design for Kickoff Knowledge features a dark black background image, and light blue added genrously to give a modern, almost futuristic feel to the quiz. The design hopes to capture a user, and allow them to get lost in the game for the period they spend playing it.
+
+### Final Design of Quiz Page
+
+[Final Design](docs/images/final-design.webp)
 
 ## Future Deployment
 
