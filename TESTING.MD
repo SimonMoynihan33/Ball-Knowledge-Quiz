@@ -28,6 +28,10 @@ No issues were found when using Microsoft Bing
 
 No issues were found when using Safari on mobile
 
+### External Testing
+
+The live site was sent out to family and friends to use and report back any issues. Any issues reported back were fixed, such as font sizes and white space below home page. These were all fixed.
+
 ### Lighthouse scores
 #### Desktop
 - Index page
@@ -86,21 +90,11 @@ Issue - Cannot get the options in the containers to show along with question.
 
 - Troubleshooting -
 
-I knew this has something to do with the ```function updateQuestion()```, as this was responsible for handling the updating of the question and choices and removing the old ones. I used  ```console.log()``` in the choices section of my function and the console threw the error ```Uncaught ReferenceError: number is not defined```.
+I knew this had something to do with the ```function updateQuestion()```, as this was responsible for handling the updating of the question and choices and removing the old ones. I used  ```console.log()``` in the choices section of my function and the console threw the error ```Uncaught ReferenceError: number is not defined```.
 
 This led me to the conclusion it was due to my naming of a variable and it not being properly defined.
 
-- Fix -
-
-```
-const choiceNumber = choice.dataset['number];
-```
-
-Needed to be changed to
-
-```
-const number = choice.dataset['number'];
-```
+- Fix - ```const choiceNumber = choice.dataset['number];``` needed to be changed to ```const number = choice.dataset['number'];```
 
 #### Bug 2 
 
@@ -108,14 +102,7 @@ Issue - Page must be refreshed in order to pick a new answer.
 
 Cause - Misspelling of function. 
 
-Fix - 
-
-``` 
-function enableAnswering() {
-    acceptingAnswers = true;
-}
-```
-This function was not being called due to a spelling error ```function enableAnsweringAnswering ()``` after I had changed it from ```allowAnswering()```.
+Fix -The function was not being called due to a spelling error ```function enableAnsweringAnswering ()``` after I had changed it from ```allowAnswering()```.
 
 #### Bug 3
 
@@ -125,16 +112,7 @@ Issue - Progress bar not updating with questions.
 
 I was unable to see the issue here myself. I spent a long time looking through the code but as I had not come across this specific code before I was unable to see the issue. To trouble shoot this the only option I felt I had was to look through outside resources, I asked a question about it on a thread on stack overflow and got a reply telling me where my issue was. 
 
-- Fix -
-```
-  progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-  ```
-Was:
-  ```
-    progressBarFull.computedStyleMap.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-  ```
-
-This was changed by Emmet autofill when typing and I had never noticed. 
+- Fix - Change ```progressBarFull.computedStyleMap.width = `${(questionCounter/MAX_QUESTIONS) * 100}%``` to ```progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%```
 
 #### Bug 4 
 
@@ -144,10 +122,7 @@ Issue - Timer not counting down.
 
 I searched through my code implementing the timer thouroughly. Here, I turned to perplexity AI, and asked it why a timer would not be counting down. They gave me many reasons and things to check, one of which was that I had properly declared the variable in my global scope. After checking, I saw my issue was a syntax mistake in the variable ```const timerText = document.querySelector('timerText');```.
 
-- Fix - Change variable to
-```
-const timerText = document.querySelector('#timer-text');
-```
+- Fix - Change variable to ```const timerText = document.querySelector('#timer-text');```
 
 #### Bug 5
 
@@ -155,9 +130,7 @@ Issue - Timer does not reset after moving to next question.
 
 Cause - resetTimer(); was not being called when needed.
 
-Fix -  
-
-Add ```resetTimer();``` function to ```getNewQuestion();``` function
+Fix -  Add ```resetTimer();``` function to ```getNewQuestion();``` function
 
 #### Bug 6
 
@@ -165,7 +138,7 @@ Issue - Timer increments by two seconds instead of one.
 
 Troubleshooting: 
 
-This bug was the most time consuming. To trouble shoot I added multiple ```setTimeout``` in different places to make the timer increment slower, but this only made the timer of the first question take longer than 10s to reach 0, and once a question was answered the timer would decrement by 2 again. My thinking was that the ```decrementTimer();``` function calls itself twice per second within it's own function, but when this was removed it would only decrement once and not continue. 
+This bug was hugely time consuming. To trouble shoot I added multiple ```setTimeout``` in different places to make the timer increment slower, but this only made the timer of the first question take longer than 10s to reach 0, and once a question was answered the timer would decrement by 2 again. My thinking was that the ```decrementTimer();``` function calls itself twice per second within it's own function, but when this was removed it would only decrement once and not continue. 
 
 I firstly put a second ```setTimeout``` within the function: 
 ```
@@ -180,7 +153,7 @@ Secondly, I reached out to tutor support. Gemma and I spent about 30-40 minutes 
 
 Next, I removed the ```decrementTimer();``` function within itself and called it within the ```updateTimer();``` function instead. This is cleaner as the function was not calling itself from inside itself, but did not solve the issue. I also added multiple console.log's throughout the ```decrementTimer();```, ```updateTimer();``` and ```resetTimer();``` respectively, showing that it was indeed decrementing by one second, but that was happening twice *per second*.
 
-Cause - The main problem was that every time decrementTimer is called, a new timeout was set without clearing the previous one. This can cause multiple timeouts to run concurrently, speeding up the timer.
+Cause - The problem was that every time decrementTimer is called, a new timeout was set without clearing the previous one. This caused multiple timeouts to run concurrently, speeding up the timer.
 
 Fix - Use ```setInterval``` instead of ```setTimeout``` and clear interval whenever timer is reset, in the ```handleTimeExpired()``` function.
 

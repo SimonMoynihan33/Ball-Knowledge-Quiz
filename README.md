@@ -6,7 +6,7 @@ Welcome to the Soccer Knowledge Quiz project! This quiz is designed to challenge
 
 ## Why 
 
-Why did I choose this topic? Soccer as a sport is very close to me. It has truly helped me through tougher times in life as an escape, and I believe many people can resonate with that. I watch, and play, as much as I can today and it's often to high point of my day. It's the beautiful game.
+Why did I choose this topic? Soccer as a sport is very close to me. It has truly helped me through tougher times in life as an escape, and I believe many people can resonate with that. I watch, and play, as much as I can today and it's often the high point of my day. It's the beautiful game.
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ Why did I choose this topic? Soccer as a sport is very close to me. It has truly
 
 ![Difficulty Desktop](docs/images/wf-difficulty-desktop.webp) ![Difficulty Mobile](docs/images/wf-difficulty-mobile.webp)
 
-I decided not to go with a difficulty option in this quiz, instead focusing on increaasing and improving functionality and features on one general level. 
+I decided not to go with a difficulty option in this quiz, instead focusing on increasing and improving functionality and features on one general level. 
 
 - Questions 
 
@@ -53,11 +53,11 @@ First time users want to:
 
 ### Repeat Users
 
-Users who wish to use the site more than once can do so, hoping to improve on their score with each subsequent attempt. A good foundation has been built and can be used as a springboard to make this app much larger scale. In the future more quiz options will be added, with varying difficulties and more niche quizzes, such as specific tournaments and teams.
+Users who wish to use the site more than once can do so, hoping to improve on their score with each subsequent attempt. A good foundation has been built and can be used as a springboard to make this app much larger scale. In the future, more quiz options will be added, with varying difficulties and more niche quizzes such as specific tournaments and teams.
 
 ## Goals
 
-The goal of this web app is to test the users knowledge of the sport, and also educate while allowing users to enjoy the experience and feel rewarded afterwards either for good knowledge of the sport, or learning and increasing their expertise.
+The goal of this web app is to test the users knowledge of the sport, and also educate while allowing users to enjoy the experience and feel rewarded afterwards, either for good knowledge of the sport, or learning and increasing their expertise.
 
 ## Features
 
@@ -70,7 +70,7 @@ Some of these features include :
 
 ![Landing Page](docs/images/landing-screen.png)
 
-- The Rules screen, outlining the timer, score and once again with links styled as buttons
+- The Rules screen, outlining the timer, score and, once again, with links styled as buttons
 
 ![Rules screen](docs/images/rules-screen.png)
 
@@ -126,10 +126,10 @@ As stated in the [Repeat Users](#repeat-users) section, there are many plans for
 This was used as a baseline to help get a grasp on javascript, but the code written is my own and this tutorial only provided inspiration and a guide of where to go. 
 
 - [ChatGPT](https://chatgpt.com/) used for getting the questions for the quiz.
-- [Perplexity AI](https://www.perplexity.ai/) used to break down and explain code back in simpler terms to help better understand what was happening, and allowing myself to restructure and recreate the code personally to make it original while achieving the same result.
 - [Red Ketchup](https://redketchup.io/) used to compress and resize images.
 - [Remove bg](https://www.remove.bg/) used to remove backgrounds of images used in the README.
 - Mentor, David Bowers.
+- Course cohort, Marko Tot.
 
 ### Photos 
 
