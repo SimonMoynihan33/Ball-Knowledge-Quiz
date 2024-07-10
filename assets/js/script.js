@@ -146,7 +146,7 @@ function isQuizOver() {
 function endQuiz() {
     localStorage.setItem('mostRecentScore', score);
     console.log('navigating to end.html file');
-    window.location.replace('/end.html');
+    window.location.replace('end.html');
 }
 
 /**
@@ -274,7 +274,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname === '/end.html') {
+if (window.location.pathname === 'end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = Number(mostRecentScore);
