@@ -180,7 +180,9 @@ function updateQuestion() {
 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
+        if (choice) {
         choice.innerText = currentQuestion['choice' + number];
+        }
     });
 
     availableQuestions.splice(questionsIndex, 1);
