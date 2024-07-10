@@ -175,13 +175,15 @@ function updateQuestion() {
         return;
     }
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionsIndex];
-    question.innerText = currentQuestion.question;
+        currentQuestion = availableQuestions[questionsIndex];
+    if (question) {
+        question.innerText = currentQuestion.question;
+    }
 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         if (choice) {
-        choice.innerText = currentQuestion['choice' + number];
+            choice.innerText = currentQuestion['choice' + number];
         }
     });
 
@@ -239,7 +241,7 @@ function applyClassAndContinue(selectedChoice, classToApply) {
 function incrementScore(num) {
     score += num;
     if (scoreText) {
-    scoreText.innerText = score;
+        scoreText.innerText = score;
     }
 }
 
@@ -247,7 +249,7 @@ function incrementScore(num) {
 
 function updateTimer() {
     if (timerText) {
-    timerText.innerText = `${timeLeft}s`;
+        timerText.innerText = `${timeLeft}s`;
     }
 }
 
@@ -289,7 +291,7 @@ if (window.location.pathname.endsWith === 'end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     if (finalScore) {
-    finalScore.innerText = Number(mostRecentScore);
+        finalScore.innerText = Number(mostRecentScore);
     }
 } else {
     setupEventListener(choices); // Call click event listener
