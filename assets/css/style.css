@@ -107,6 +107,10 @@ a {
     line-height: 20px;
 }
 
+.rules li {
+    margin-bottom: 20px;
+}
+
 .rules-container h1 {
     font-size: 1.4rem;
 }
