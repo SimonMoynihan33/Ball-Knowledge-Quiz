@@ -68,9 +68,9 @@ const questions = [{
         answer: 4,
     },
     {
-        question: 'Who is the heighest goal scorer in history',
+        question: 'Who is the highest goal scorer in history',
         choice1: 'Lionel Messi',
-        choice2: 'Maradonna',
+        choice2: 'Maradona',
         choice3: 'Pele',
         choice4: 'Cristiano Ronaldo',
         answer: 4,
@@ -99,7 +99,7 @@ const questions = [{
         choice4: 'Mohammed Salah',
         answer: 2,
     },
-]
+];
 
 const SCORE_POINTS = 1000;
 const MAX_QUESTIONS = 10;
@@ -137,7 +137,7 @@ function getNewQuestion() {
  *  Checks if quiz is over by verifying if there are no more questions or counter has exceeded maximum
  */
 function isQuizOver() {
-    return availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS;
+    return availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS;
 }
 
 /**
@@ -160,8 +160,10 @@ function incrementQuestionCounter() {
  */
 // Tutorial followed in more detail for progress bar with slight changes made to code 
 function updateProgress() {
+    if (progressText && progressBarFull) {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+    }
 }
 
 /**
