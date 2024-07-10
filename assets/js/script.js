@@ -274,7 +274,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname === '/end.html') {
+if (window.location.pathname === 'end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = Number(mostRecentScore);
