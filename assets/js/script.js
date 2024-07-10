@@ -236,15 +236,19 @@ function applyClassAndContinue(selectedChoice, classToApply) {
     }, 1000);
 }
 
-incrementScore = num => {
+function incrementScore(num) {
     score += num;
+    if (scoreText) {
     scoreText.innerText = score;
+    }
 }
 
 // Create Timer for each question
 
 function updateTimer() {
-    timerText.innerText = `${timeLeft}s`
+    if (timerText) {
+    timerText.innerText = `${timeLeft}s`;
+    }
 }
 
 /**
@@ -284,7 +288,9 @@ function handleTimeExpired() {
 if (window.location.pathname.endsWith === 'end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
+    if (finalScore) {
     finalScore.innerText = Number(mostRecentScore);
+    }
 } else {
     setupEventListener(choices); // Call click event listener
     startGame(); // Call start function
