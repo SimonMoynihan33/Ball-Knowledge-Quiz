@@ -202,3 +202,5 @@ Fix - Add ```class="hidden"``` to img tag and ```display: none;``` to hidden cla
 ## Unfixed Bugs
 
 There are no bugs I have left unfixed.
+
+[**Back to Readme**](/README.md#testing)

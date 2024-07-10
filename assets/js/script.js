@@ -208,6 +208,8 @@ function setupEventListener(choices) {
     choices.forEach(choice => {
         choice.addEventListener('click', handleChoiceClick);
     });
+
+    hintButton.addEventListener('click', useHint);
 }
 
 /**
@@ -223,7 +225,7 @@ function handleChoiceClick(e) {
     // Applies red or green css class to indicate answer
     let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
     if (classToApply === 'correct') {
-        incrementScore(SCORE_POINTS);
+        incrementScore(hintUsed ? HINT_POINTS : SCORE_POINTS);
     }
 
     applyClassAndContinue(selectedChoice, classToApply);
@@ -250,6 +252,21 @@ function incrementScore(num) {
     if (scoreText) {
         scoreText.innerText = score;
     }
+}
+
+function useHint() {
+    if (hintUsed) return;
+
+    hintUsed = true;
+    
+    let incorrectAnswers = choices.filter(choice => choice.dataset['number'] != currentQuestion.answer);
+    incorrectAnswers.sort(() => Math.random() - 0.5);
+    incorrectAnswers.slice(0, 2).forEach(choice => {
+        choice.parentElement.classList.add('hidden');
+    });
+
+    hintButton.disabled = true;
+
 }
 
 // Create Timer for each question
