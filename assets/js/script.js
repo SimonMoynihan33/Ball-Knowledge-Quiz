@@ -4,7 +4,6 @@
 */
 
 // Variables
-document.addEventListener('DOMContentLoaded', () => {
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
@@ -341,4 +340,3 @@ if (window.location.pathname.endsWith('/end.html')) {
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function
-});
