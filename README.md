@@ -1,4 +1,4 @@
-# Ball Knowledge Quiz
+# Kickoff Knowledge Quiz
 
 Welcome to the Soccer Knowledge Quiz project! This quiz is designed to challenge and enhance your understanding of the world's most popular sport, soccer. Whether you're a passionate fan, a budding player, or just someone looking to test your knowledge, this quiz offers a fun and educational experience. Dive into questions covering the history of soccer, famous players, iconic matches, rules of the game, and much more. Get ready to put your soccer knowledge to the test and see how you score!
 
@@ -25,6 +25,8 @@ Why did I choose this topic? Soccer as a sport is very close to me. It has truly
 
 ![Difficulty Desktop](docs/images/wf-difficulty-desktop.webp) ![Difficulty Mobile](docs/images/wf-difficulty-mobile.webp)
 
+I decided not to go with a difficulty option in this quiz, instead focusing on increaasing and improving functionality and features on one general level. 
+
 - Questions 
 
 ![Questions Desktop](docs/images/wf-questions-desktop.webp) ![Questions Mobile](docs/images/wf-questions-mobile.webp)
@@ -33,8 +35,11 @@ Why did I choose this topic? Soccer as a sport is very close to me. It has truly
 
 ![Results Desktop](docs/images/wf-results-desktop.webp)
 
+Due to having no backend and having to use local storage, which is limited in its abilities, I did not implement the leaderboard feature.
 
 ## User Experience
+
+
 
 ### First Time Users
 
