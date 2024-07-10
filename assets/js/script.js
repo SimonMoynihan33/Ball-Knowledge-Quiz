@@ -19,7 +19,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 let timerInterval; 
 
-let questions = [{
+const questions = [{
         question: 'Who is the all-time top scorer in the UEFA Champions League?',
         choice1: 'Lionel Messi',
         choice2: 'Robert Lewandowski',
@@ -144,9 +144,8 @@ function isQuizOver() {
  * Handles logic for ending quiz, displaying score, redirecting to end page
  */
 function endQuiz() {
-    localStorage.setItem('mostRecentScore', score);
-    console.log('navigating to end.html file');
     window.location.replace('end.html');
+    localStorage.setItem('mostRecentScore', score);    
 }
 
 /**
@@ -274,7 +273,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname === 'end.html') {
+if (window.location.pathname.endsWith === 'end.html') {
     const finalScore = document.querySelector('#final-score');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     finalScore.innerText = Number(mostRecentScore);
