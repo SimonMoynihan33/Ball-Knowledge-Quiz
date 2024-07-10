@@ -22,7 +22,7 @@ body {
     padding: 0;
     margin: 0;
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
- 
+
 }
 
 
@@ -95,14 +95,6 @@ a {
 .sports {
     color: #1e1e1e;
     background: #66fcf1;
-}
-
-/* Activates when button is hovered with cursor */
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0;
-    transition: 150ms;
-    transform: scale(1.4);
 }
 
 /* Soccer rules page */
@@ -197,13 +189,6 @@ a {
     color: #fff;
 }
 
-/* Adds style when hovering over answers */
-.choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 .4rem 1rem 0 #66fcf1;
-    transform: scale(1.02);
-}
-
 /* Choices styles */
 .choice-text {
     width: 100%;
@@ -278,7 +263,7 @@ a {
     }
 
     .rules {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
         line-height: 30px;
     }
 
@@ -331,9 +316,24 @@ a {
         font-size: 1.2rem;
     }
 
+    /* Activates when button is hovered with cursor */
+    .btn:hover {
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0;
+        transition: 150ms;
+        transform: scale(1.4);
+    }
+
     /* Choices in quiz */
     .choice-text {
         font-size: 1.3rem;
+    }
+
+    /* Adds style when hovering over answers */
+    .choice-container:hover {
+        cursor: pointer;
+        box-shadow: 0 .4rem 1rem 0 #66fcf1;
+        transform: scale(1.02);
     }
 
     /* Container holding choices */
@@ -358,7 +358,8 @@ a {
         width: 90%;
     }
 
-    #final-score, #score-text {
+    #final-score,
+    #score-text {
         font-size: 4rem;
     }
 }
