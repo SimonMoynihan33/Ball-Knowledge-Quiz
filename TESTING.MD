@@ -225,3 +225,7 @@ Issue - White space at the bottom of screen on home page
 Cause - Added img element in html to have an alt tag but never set the display to hidden
 
 Fix - Add ```class="hidden"``` to img tag and ```display: none;``` to hidden class in css
+
+## Unfixed Bugs
+
+There are no bugs I have left unfixed.
