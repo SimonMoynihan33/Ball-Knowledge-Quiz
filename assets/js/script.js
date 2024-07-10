@@ -17,7 +17,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let timerInterval; 
+let timerInterval;
 
 const questions = [{
         question: 'Who is the all-time top scorer in the UEFA Champions League?',
@@ -109,7 +109,7 @@ let timeLeft = TIME_LIMIT;
 
 /**
  * Function to start the game
- **/ 
+ **/
 function startGame() {
     questionCounter = 0;
     score = 0;
@@ -130,7 +130,7 @@ function getNewQuestion() {
     updateProgress();
     updateQuestion();
     enableAnswering();
-    resetTimer(); 
+    resetTimer();
 }
 
 /**
@@ -145,7 +145,7 @@ function isQuizOver() {
  */
 function endQuiz() {
     window.location.replace('end.html');
-    localStorage.setItem('mostRecentScore', score);    
+    localStorage.setItem('mostRecentScore', score);
 }
 
 /**
@@ -161,8 +161,8 @@ function incrementQuestionCounter() {
 // Tutorial followed in more detail for progress bar with slight changes made to code 
 function updateProgress() {
     if (progressText && progressBarFull) {
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+        progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+        progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
     }
 }
 
@@ -170,6 +170,10 @@ function updateProgress() {
  * Selects a new question, updates choices displayed and removes old question
  */
 function updateQuestion() {
+    if (availableQuestions.length === 0) {
+        endQuiz();
+        return;
+    }
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question;
@@ -202,7 +206,7 @@ function setupEventListener(choices) {
  * Handle click event for a choice
  */
 function handleChoiceClick(e) {
-    if(!acceptingAnswers) return;
+    if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
     const selectedChoice = e.target;
