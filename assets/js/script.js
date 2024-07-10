@@ -175,7 +175,7 @@ function updateQuestion() {
         return;
     }
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-        currentQuestion = availableQuestions[questionsIndex];
+    currentQuestion = availableQuestions[questionsIndex];
     if (question) {
         question.innerText = currentQuestion.question;
     }
