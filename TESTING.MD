@@ -2,19 +2,51 @@
 
 
 ### Lighthouse scores
-- **Desktop**
+#### Desktop
+- Index page
 
+![Index Lighthouse Desktop](docs/images/lh-desktop-index.png)
 
-- **Mobile**
+- Rules page
 
+![Lighthouse Rules Desktop](docs/images/lh-desktop-rules.png)
+
+- Quiz page
+
+![Lighthouse Quiz Desktop](docs/images/lh-desktop-quiz.png)
+
+#### Mobile
+- Index page
+
+![Lighthouse Index Mobile](docs/images/lh-mobile-index.png)
+
+- Rules page
+
+![Lighthouse Rules Mobile](docs/images/lh-mobile-rules.png)
+
+- Quiz page
+
+![Lighthouse Quiz Mobile](docs/images/lh-mobile-quiz.png)
 
 ### Validator Testing 
 
 - HTML
+  **Index page** No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmoynihan33.github.io%2FKickoff-Knowledge-Quiz%2Findex.html)
   
+  **Rules page** No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmoynihan33.github.io%2FKickoff-Knowledge-Quiz%2Fsoccer-rules.html)
+
+  **Quiz page** No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmoynihan33.github.io%2FKickoff-Knowledge-Quiz%2Fsoccer-quiz.html)
+
+  **End page** No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmoynihan33.github.io%2FKickoff-Knowledge-Quiz%2Fend.html)
+
 - CSS
+
+No errors were found when passing through the official Jigsaw validator via direct input
+
+![CSS validation](docs/images/css-validation-quiz.png)
   
 
+- JS 
 - WAVE
   - Each page was put through [WAVE](https://wave.webaim.org/) evaluation tool and any errors found were fixed.
 
