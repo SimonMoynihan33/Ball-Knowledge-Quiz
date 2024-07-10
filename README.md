@@ -2,6 +2,8 @@
 
 Welcome to the Soccer Knowledge Quiz project! This quiz is designed to challenge and enhance your understanding of the world's most popular sport, soccer. Whether you're a passionate fan, a budding player, or just someone looking to test your knowledge, this quiz offers a fun and educational experience. Dive into questions covering the history of soccer, famous players, iconic matches, rules of the game, and much more. Get ready to put your soccer knowledge to the test and see how you score!
 
+![Am I Responsive](docs/images/am-i-responsive.png)
+
 ## Why 
 
 Why did I choose this topic? Soccer as a sport is very close to me. It has truly helped me through tougher times in life as an escape, and I believe many people can resonate with that. I watch, and play, as much as I can today and it's often to high point of my day. It's the beautiful game.
@@ -55,7 +57,7 @@ Users who wish to use the site more than once can do so, hoping to improve on th
 
 ## Goals
 
-The goal of this weba app is to test the users knowledge of the sport, and also educate while allowing users to enjoy the experience and feel rewarded afterwards either for good knowledge of the sport, or learning and increasing their expertise.
+The goal of this web app is to test the users knowledge of the sport, and also educate while allowing users to enjoy the experience and feel rewarded afterwards either for good knowledge of the sport, or learning and increasing their expertise.
 
 ## Features
 
@@ -100,10 +102,7 @@ Some of these features include :
 
 ## Design
 
-
-
-
-
+The design for Kickoff Knowledge features a dark black background image, and light blue added genrously to give a modern, almost futuristic feel to the quiz. The design hopes to capture a user, and allow them to get lost in the game for the period they spend playing it.
 
 ## Future Deployment
 
@@ -122,11 +121,15 @@ As stated in the [Repeat Users](#repeat-users) section, there are many plans for
 ## Credits
 ### General Credits
 
-- [Youtube tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=PLmEz6BxNwVPc-oP7rMw_oJ7yssN0jT844&index=2) By 'Brian Design'
+- [Youtube tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=PLmEz6BxNwVPc-oP7rMw_oJ7yssN0jT844&index=2) By 'Brian Design'.
+
+This was used as a baseline to help get a grasp on javascript, but the code written is my own and this tutorial only provided inspiration and a guide of where to go. 
+
 - [ChatGPT](https://chatgpt.com/) used for getting the questions for the quiz.
 - [Perplexity AI](https://www.perplexity.ai/) used to break down and explain code back in simpler terms to help better understand what was happening, and allowing myself to restructure and recreate the code personally to make it original while achieving the same result.
+- [Red Ketchup](https://redketchup.io/) used to compress and resize images.
+- [Remove bg](https://www.remove.bg/) used to remove backgrounds of images used in the README.
 - Mentor, David Bowers.
-
 
 ### Photos 
 
