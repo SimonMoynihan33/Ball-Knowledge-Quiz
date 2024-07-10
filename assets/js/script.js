@@ -1,5 +1,5 @@
 /*
-/ Tutorial followed as a baseline. Link in ReadME.
+/ Based on tutorial. (https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=PLmEz6BxNwVPc-oP7rMw_oJ7yssN0jT844&index=3)
 / Own changes made and improvements
 */
 
@@ -176,12 +176,14 @@ function updateQuestion() {
         endQuiz();
         return;
     }
+    // Gets random question
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     if (question) {
         question.innerText = currentQuestion.question;
     }
 
+    // Gets choices 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         if (choice) {
@@ -240,6 +242,9 @@ function applyClassAndContinue(selectedChoice, classToApply) {
     }, 1000);
 }
 
+/**
+ * Increments score
+ */
 function incrementScore(num) {
     score += num;
     if (scoreText) {
@@ -249,6 +254,9 @@ function incrementScore(num) {
 
 // Create Timer for each question
 
+/**
+ * Updates text in HUD for timer
+ */
 function updateTimer() {
     if (timerText) {
         timerText.innerText = `${timeLeft}s`;
@@ -280,6 +288,9 @@ function startTimer() {
     }, 1000); // Decrement timer every 1 second
 }
 
+/**
+ * Handles timer reaching zero
+ */
 function handleTimeExpired() {
     acceptingAnswers = false;
     clearInterval(timerInterval); // Clear timer when time expires
@@ -299,16 +310,6 @@ if (window.location.pathname.endsWith('/end.html')) {
     setupEventListener(choices); // Call click event listener
     startGame(); // Call start function
 }
-
-/*if (mostRecentScore = 10000) {
-    alert('Perfect Score, Well done!');
-} else if (mostRecentScore >= 8000) {
-    alert(`Nice! You got ${mostRecentScore}. Doesn't get much better than that`);
-} else if (mostRecentScore >= 5000) {
-    alert(`Not bad. You got ${mostRecentScore}. Want to go for higher?`);
-} else {
-    alert(`Come on, you can do better than that! You got ${mostRecentScore}`)
-}*/
 
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function
