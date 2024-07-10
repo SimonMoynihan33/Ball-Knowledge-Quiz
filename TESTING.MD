@@ -186,24 +186,37 @@ Fix - Use ```setInterval``` instead of ```setTimeout``` and clear interval whene
 
 #### Bug 7
 
-Issue - Could not get score to show on end.html
+Issue - File path not working in JS. When the quiz is finished the end.html page won't show on live site.
 
-Cause - Code had to be activating only on end.html page, and score had to be saved to local storage.
+Cause - / before the file was causing this issue
 
-Fix - 
-```
-if (window.location.pathname === '/end.html') {
-    const finalScore = document.querySelector('#final-score');
-    const mostRecentScore = localStorage.getItem('mostRecentScore');
-    finalScore.innerText = Number(mostRecentScore);
-} else {
-    setupEventListener(choices); // Call click event listener
-    startGame(); // Call start function
-}
-```
+Fix - Change to ```window.location.replace('end.html')'```
+
 #### Bug 8
 
-Issue - Relative file path not working in JS. When the quiz is finished the end.html page won't show on live site.
+Issue - Could not get score to show on end.html
+
+This issue forced me to push a huge amount of commits as it was only occuring on the live site and pushing was the only way to test changes.
+
+Troubleshooting - I used absolute and relative file paths, none of which worked. I also tried using the full http which also did not work. This was a huge issue that forced me to run through my code and add if statements to most of my functions that did not already have them in the hopes of finding a solution. 
+
+Cause - 
+
+```
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+    if (finalScore) {
+        finalScore.innerText = Number(mostRecentScore);
+    }
+```
+
+Fix - Change to 
+
+```
+const lastScore = localStorage.getItem('mostRecentScore');
+    if (finalScore) {
+        finalScore.innerText = Number(lastScore);
+    }
+```
 
 #### Bug 9 
 
