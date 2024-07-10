@@ -59,6 +59,44 @@ The goal of this weba app is to test the users knowledge of the sport, and also 
 
 ## Features
 
+The site was made using mobile first design, meaning it is fully responsive on screens tested up to 2560px.
+
+This web app offers some sleek and well designed features. Some of these took inspiration from a youtube tutorial documented in the credits section, but all code written is original and others have been added from scratch.
+
+Some of these features include :
+- A Landing page container with link styled as a button
+
+![Landing Page](docs/images/landing-screen.png)
+
+- The Rules screen, outlining the timer, score and once again with links styled as buttons
+
+![Rules screen](docs/images/rules-screen.png)
+
+- The Question counter. This increments through each question (one to ten), and displays the current question to the user
+
+![Question Counter](docs/images/question-counter.png)
+
+- A score counter, to keep track of the users score, incrementing by 1,000 for each correct question
+
+![Score Counter](docs/images/score-counter.png)
+
+- Timer, decrementing by one every second and moving to the next question if it hits zero
+
+![Timer](docs/images/timer.png)
+
+- Questions and choices, changing each time a user answers or the timer hitz zero, and giving feedback whether the answer was correct or incorrect 
+
+![Questions and answers](docs/images/questions-choices.png)
+
+- The chosen answer will be highlighted in red if incorrect or green if correct. The user will be given time after answering to see the result and understand whether their answer was right or wrong.
+
+![Correct](docs/images/correct-answer.png)
+
+![Incorrect](docs/images/incorrect-answer.png)
+
+- Final score. The final score is shown to the user on the end page to let them know how they've done
+
+![Final Score](docs/images/final-score.png)
 
 ## Design
 
@@ -92,5 +130,5 @@ As stated in the [Repeat Users](#repeat-users) section, there are many plans for
 
 ### Photos 
 
-- [Sports quiz photo](https://www.scoopwhoop.com/sports/50-iconic-football-photos-from-through-the-ages-that-every-fan-needs-to-see/)
+- [Sports quiz photo](https://www.pexels.com/photo/multicolored-soccer-ball-on-green-field-47730/)
 - [Background](https://mrwallpaper.com/images/hd/hd-football-nike-black-hhdfdw95z8vh702t.jpg)
