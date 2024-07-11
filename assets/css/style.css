@@ -283,6 +283,11 @@ a {
     display: none;
 }
 
+#error {
+    font-size: 3rem;
+    color: #66fcf1
+}
+
 /* Query Selectors */
 @media screen and (min-width: 768px) {
 
