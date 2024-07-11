@@ -164,6 +164,7 @@ function incrementQuestionCounter() {
  */
 // Tutorial followed in more detail for progress bar with slight changes made to code 
 function updateProgress() {
+    // If statement added with help from Marko Tot
     if (progressText && progressBarFull) {
         progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
         progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
@@ -181,6 +182,7 @@ function updateQuestion() {
     // Gets random question
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
+    // If statement added with help from Marko Tot
     if (question) {
         question.innerText = currentQuestion.question;
     }
@@ -188,6 +190,7 @@ function updateQuestion() {
     // Gets choices 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
+        // If statement added with help from Marko Tot
         if (choice) {
             choice.innerText = currentQuestion['choice' + number];
             choice.classList.remove('hidden'); // Ensure choices are visible again
@@ -253,6 +256,7 @@ function applyClassAndContinue(selectedChoice, classToApply) {
  */
 function incrementScore(num) {
     score += num;
+    // If statement added with help from Marko Tot
     if (scoreText) {
         scoreText.innerText = score;
     }
@@ -290,6 +294,7 @@ function resetHint() {
  * Updates text in HUD for timer
  */
 function updateTimer() {
+    // If statement added with help from Marko Tot
     if (timerText) {
         timerText.innerText = `${timeLeft}s`;
     }
