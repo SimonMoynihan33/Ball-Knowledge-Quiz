@@ -87,6 +87,8 @@ After some work I managed to improve the scores for each page
 
   **End page** No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmoynihan33.github.io%2FKickoff-Knowledge-Quiz%2Fend.html)
 
+- There is a warning regarding my h1 element on the Rules, Quiz and End page. This issue is due to how I styled the headings and is not a major one. It does not negatively impact the site.
+
 - CSS
 
 No errors were found when passing through the official Jigsaw validator via direct input
