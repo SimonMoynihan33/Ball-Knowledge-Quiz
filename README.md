@@ -107,6 +107,10 @@ Some of these features include :
 
 ![Final Score](docs/images/final-score.png)
 
+- 404 page
+
+![404 page](docs/images/404-page.png)
+
 ## Design
 
 The design for Kickoff Knowledge features a dark black background image, and light blue added genrously to give a modern, almost futuristic feel to the quiz. The design hopes to capture a user, and allow them to get lost in the game for the period they spend playing it.
