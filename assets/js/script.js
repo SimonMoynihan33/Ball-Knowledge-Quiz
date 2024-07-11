@@ -337,7 +337,7 @@ function handleTimeExpired() {
 /**
  * Display final score
  */
-if (window.location.pathname.endsWith('/end.html')) {
+if (window.location.pathname.endsWith('/end.html')) { //.endsWith added by Marko Tot
     const finalScore = document.querySelector('#final-score');
     const lastScore = localStorage.getItem('mostRecentScore');
     if (finalScore) {
