@@ -293,15 +293,20 @@ a {
 
 #error > h2 {
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
 }
 
 #error > h1 {
     text-align: center;
     margin-top: 20vh;
-    font-size: 5rem;
+    font-size: 4.5rem;
     color: #66fcf1
+}
+
+#errorbtns {
+    width: 100%;
+    text-align: center;
 }
 
 /* Query Selectors */
