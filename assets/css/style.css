@@ -291,19 +291,13 @@ a {
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
-#error-container {
-    text-align: center;
-    font-size: 3rem;
-    color: #fff;
-}
-
-#error h2 {
+#error > h2 {
     color: #fff;
     font-size: 3.5rem;
     text-align: center;
 }
 
-#error h1 {
+#error > h1 {
     text-align: center;
     margin-top: 20vh;
     font-size: 5rem;
