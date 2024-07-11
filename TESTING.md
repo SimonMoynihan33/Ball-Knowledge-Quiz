@@ -1,5 +1,5 @@
 ### Commits
-I had a massive issue with getting the end page to display on the live site, and then getting the score to implement. This was not an issue on the local site, which is why many of my commits are pushing to test solutions on the live site. I understand this is not ideal but it was the only way to test the live site end page worked as intended
+I had a massive issue with getting the end page to display on the live site, and then getting the score to implement. This was not an issue on the local site, which is why many of my commits are pushing to test solutions on the live site. I understand this is not ideal but it was the only way to test the live site end page worked as intended.
 
 ### Manual Testing
 Manual testing was carried out on multiple screen sizes and web browsers
