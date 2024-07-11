@@ -291,11 +291,15 @@ a {
     background: url(../images/ball-img-dark.jpg) no-repeat center center/cover;
 }
 
-#error-page {
-    display: block;
+#error-container {
     text-align: center;
-    color: #ffffff;
     font-size: 3rem;
+    color: #fff;
+}
+
+#error-page h2 {
+    color: #fff;
+    font-size: 3.5rem;
 }
 
 #error-page h1 {
