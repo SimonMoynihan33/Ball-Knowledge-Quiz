@@ -284,7 +284,7 @@ a {
 }
 
 #no-page {
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -292,6 +292,7 @@ a {
 }
 
 #error-page {
+    display: block;
     text-align: center;
     color: #ffffff;
     font-size: 3rem;
