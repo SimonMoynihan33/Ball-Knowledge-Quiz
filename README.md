@@ -157,6 +157,8 @@ This was used as a baseline to help get a grasp on javascript, but the code writ
 - Mentor, David Bowers.
 - Course cohort, Marko Tot.
 
+Marko helped me with a bug I was facing, not able to get my end page to show or the final score. His additions are documented in the code. The code without the if statements was still functional (see commit 6c611ac), but Marko helped me in adding if statements in the hopes it would fix my bug for the page not showing and score not saving.
+
 ### Photos 
 
 - [Sports quiz photo](https://www.pexels.com/photo/multicolored-soccer-ball-on-green-field-47730/)
