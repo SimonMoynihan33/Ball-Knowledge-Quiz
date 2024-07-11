@@ -8,6 +8,8 @@ Welcome to the Soccer Knowledge Quiz project! This quiz is designed to challenge
 
 Why did I choose this topic? Soccer as a sport is very close to me. It has truly helped me through tougher times in life as an escape, and I believe many people can resonate with that. I watch, and play, as much as I can today and it's often the high point of my day. It's the beautiful game.
 
+[Play the Quiz!](https://simonmoynihan33.github.io/Kickoff-Knowledge-Quiz/)
+
 ## Table of Contents
 
 - [Creation Structure](#creation-structure)
@@ -17,7 +19,6 @@ Why did I choose this topic? Soccer as a sport is very close to me. It has truly
 - [Design](#design)
 - [Future Deployment](#future-deployment)
 - [Testing](#testing)
-- [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -127,6 +128,17 @@ As stated in the [Repeat Users](#repeat-users) section, there are many plans for
 ## Testing 
 [Testing](/TESTING.MD)
 
+## Deployment 
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From here, navigate to the pages section
+  - Change branch to main if not already selected
+  - Click save
+  - Go back to Code section on the top left
+  - Scroll to deployments
+
+The live link can be found [here](https://simonmoynihan33.github.io/Kickoff-Knowledge-Quiz/)
 
 ## Credits
 ### General Credits
