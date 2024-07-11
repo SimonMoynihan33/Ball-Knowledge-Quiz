@@ -267,12 +267,9 @@ function useHint() {
     hintUsed = true;
 
     let incorrectAnswers = choices.filter(choice => choice.dataset['number'] != currentQuestion.answer);
-    console.log("Incorrect answers before shuffle:", incorrectAnswers);
     incorrectAnswers.sort(() => Math.random() - 0.5); // Shuffle the incorrect answers
-    console.log("Incorrect answers after shuffle:", incorrectAnswers);
 
     incorrectAnswers.slice(0, 2).forEach(choice => {
-        console.log("Hiding choice:", choice);
         choice.classList.add('hidden'); // Add 'hidden' class to hide the incorrect answers
     });
 
