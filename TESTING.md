@@ -90,7 +90,6 @@ After some work I managed to improve the scores for each page
 - There is a warning regarding my h1 element on the Rules, Quiz and End page. This issue is due to how I styled the headings and is not a major one. It does not negatively impact the site.
 
 - CSS
-
 No errors were found when passing through the official Jigsaw validator via direct input
 
 ![CSS validation](docs/images/css-validation-quiz.png)

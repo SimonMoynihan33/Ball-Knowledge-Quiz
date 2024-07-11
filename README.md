@@ -130,7 +130,7 @@ As stated in the [Repeat Users](#repeat-users) section, there are many plans for
 - After all this is implemented, adding more games to make the site as accessible as possible to everybody
 
 ## Testing 
-[Testing](/TESTING.MD)
+My testing phase was carried out in a seperate file named [TESTING.md](/TESTING.md)
 
 ## Deployment 
 
