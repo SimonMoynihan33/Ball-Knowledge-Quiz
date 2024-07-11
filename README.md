@@ -112,7 +112,7 @@ The design for Kickoff Knowledge features a dark black background image, and lig
 
 ### Final Design of Quiz Page
 
-[Final Design](docs/images/final-design.webp)
+![Final Design](docs/images/final-design.webp)
 
 ## Future Deployment
 

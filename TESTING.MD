@@ -78,7 +78,17 @@ No errors were found when passing through the official Jigsaw validator via dire
   
 
 - JS 
-No errors were found when passing through the official 
+No errors were found when passing through the official [JSHint validator](https://jshint.com/).
+
+Three warnings were recieved, but after a google search I found these are not major issues and, the code all works as intended.
+
+![Warnings](docs/images/jshint-warnings.png)
+
+The metrics of Kickoff Knowledge Quiz were:
+
+![Metrics](docs/images/jshint-metrics.png)
+
+
 
 - WAVE
   - Each page was put through [WAVE](https://wave.webaim.org/) evaluation tool and any errors found were fixed.

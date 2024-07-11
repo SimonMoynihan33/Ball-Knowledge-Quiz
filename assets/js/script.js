@@ -211,8 +211,9 @@ function setupEventListener(choices) {
     choices.forEach(choice => {
         choice.addEventListener('click', handleChoiceClick);
     });
-
-    hintButton.addEventListener('click', useHint);
+    if (hintButton) {
+        hintButton.addEventListener('click', useHint);
+    }
 }
 
 /**
@@ -345,5 +346,7 @@ if (window.location.pathname.endsWith('/end.html')) {
     startGame(); // Call start function
 }
 
+document.addEventListener('DOMContentLoaded', function() {
 setupEventListener(choices); // Call click event listener
 startGame(); // Call start function
+});
