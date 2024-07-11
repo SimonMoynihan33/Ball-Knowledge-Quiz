@@ -59,6 +59,23 @@ The live site was sent out to family and friends to use and report back any issu
 
 ![Lighthouse Quiz Mobile](docs/images/lh-mobile-quiz.png)
 
+
+After some work I managed to improve the scores for each page
+
+**Desktop**
+
+![Improved Index Desktop](docs/images/improved-lh-desktop-index.png)
+![Improved Rules Desktop](docs/images/improved-lh-desktop-rules.png)
+![Improved Quiz Desktop](docs/images/improved-lh-desktop-quiz.png)
+![Improved End Desktop](docs/images/improved-lh-desktop-end.png)
+
+**Mobile**
+
+![Improved Index Mobile](docs/images/improved-lh-mobile-index.png)
+![Improved Rules Mobile](docs/images/improved-lh-mobile-rules.png)
+![Improved Quiz Mobile](docs/images/improved-lh-mobile-quiz.png)
+![Improved End Mobile](docs/images/improved-lh-mobile-end.png)
+
 ### Validator Testing 
 
 - HTML
